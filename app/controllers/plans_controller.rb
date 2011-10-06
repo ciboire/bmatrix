@@ -57,6 +57,8 @@ class PlansController < ApplicationController
   # PUT /plans/1.json
   def update
     @plan = Plan.find(params[:id])
+    @plan.status = 'Loaded' if params[:commit] == 'Images have been loaded into CDMS'
+    @plan.save
 
     respond_to do |format|
       if @plan.update_attributes(params[:plan])

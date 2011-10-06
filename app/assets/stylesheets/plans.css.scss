@@ -30,15 +30,13 @@ td.even {
 background-color: #e2e2e2
 }
 
-
 table a {
   display: block;
   border: 1px solid #bbb;
   padding: 5px;
   text-decoration: none;
-  color: #000;
   &:hover {
-    color: white;
+    color: #000;
     border: 1px solid black; } }
 
 .upcoming {

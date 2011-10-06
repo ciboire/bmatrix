@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Back', plans_path %>
+
 <p>
   <b>Target:</b>
   <%= @plan.target %>
@@ -15,11 +17,29 @@
   <%= @plan.firstname %>
 </p>
 
-<p>
-  <b>Status:</b>
-  <%= @plan.status %>
-</p>
+<%= form_for(@plan) do |f| %>
+  <% if @plan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
+
+      <ul>
+      <% @plan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :status %><br />
+	<%= f.select(:status, Plan::STATUS) %>
+  </div>
+
+  <%= f.label 'Comment' %> <br />
+  <%= text_area_tag :comment, nil, :cols => 100, :rows => 4 %>
+  <br />
+  <br />
+  <%= submit_tag 'Submit' %>
+<% end %>
 
 
-<%= link_to 'Edit', edit_plan_path(@plan) %> |
-<%= link_to 'Back', plans_path %>

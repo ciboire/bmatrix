@@ -6266,3 +6266,3044 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 18:43:41 -0600
 Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePlans (20111005200949)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("plans")
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-05 20:18:56 -0700
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (11.2ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 21:19:21 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (15.6ms)
+Cache for Asset (application.js) is stale
+/Users/administrator/.rvm/gems/ruby-1.9.2-p180/gems/jquery-rails-1.0.14/vendor/assets/javascripts/jquery.js isn't in paths: /Users/ciboire/git/bmatrix/app/assets/images, /Users/ciboire/git/bmatrix/app/assets/javascripts, /Users/ciboire/git/bmatrix/app/assets/stylesheets, /Users/ciboire/git/bmatrix/vendor/assets/stylesheets, /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/jquery-rails-1.0.14/vendor/assets/javascripts
+Compiled application.js  (3ms)  (pid 19735)
+Compiled jquery.js  (2ms)  (pid 19735)
+Compiled jquery_ujs.js  (0ms)  (pid 19735)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:19:21 -0600
+Served asset /plans.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:19:21 -0600
+Served asset /jquery_ujs.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:19:21 -0600
+Served asset /jquery.js - 200 OK (11ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:19:21 -0600
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:19:21 -0600
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:19:21 -0600
+Served asset /plans.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:19:21 -0600
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 21:31:43 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.5ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 123ms (Views: 120.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:31:44 -0600
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:31:44 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:31:44 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:31:44 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:31:44 -0600
+Served asset /plans.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:31:44 -0600
+Served asset /plans.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:31:44 -0600
+Served asset /application.js - 304 Not Modified (28ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:31:48 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (32.2ms)
+Completed 500 Internal Server Error in 41ms
+
+ActionView::Template::Error (undefined method `stringify_keys!' for "loaded":String):
+    29:   <% end %>
+    30: 
+    31:   <% if @plan.status == "Upcoming" %>
+    32: 	<%= f.submit 'Images loaded into CDMS', 'loaded' %>
+    33:   <% end %>
+    34: <% end %>
+    35: 
+  app/views/plans/show.html.erb:32:in `block in _app_views_plans_show_html_erb__1516984477627461204_70118999438640'
+  app/views/plans/show.html.erb:18:in `_app_views_plans_show_html_erb__1516984477627461204_70118999438640'
+  app/controllers/plans_controller.rb:18:in `show'
+
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:34:25 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlan Load (0.4ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:34:25 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:34:25 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:34:25 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:34:25 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:34:25 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:34:25 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:34:25 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:34:56 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlan Load (0.5ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:34:56 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:34:56 -0600
+Served asset /plans.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:34:56 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:34:56 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:34:56 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:34:56 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:34:56 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:35:11 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlan Load (0.5ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:35:11 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:35:11 -0600
+Served asset /plans.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:35:11 -0600
+Served asset /plans.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:35:11 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:35:11 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:35:11 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:35:11 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:35:34 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlan Load (5.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (98.0ms)
+Completed 500 Internal Server Error in 110ms
+
+ActionView::Template::Error (undefined method `button' for #<ActionView::Helpers::FormBuilder:0x007f8bb422f6e0>):
+    29:   <% end %>
+    30: 
+    31:   <% if @plan.status == "Upcoming" %>
+    32: 	<%= f.button 'Images have been loaded into CDMS' %>
+    33:   <% end %>
+    34: <% end %>
+    35: 
+  app/views/plans/show.html.erb:32:in `block in _app_views_plans_show_html_erb__1516984477627461204_70119001528500'
+  app/views/plans/show.html.erb:18:in `_app_views_plans_show_html_erb__1516984477627461204_70119001528500'
+  app/controllers/plans_controller.rb:18:in `show'
+
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:35:48 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlan Load (0.5ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (93.7ms)
+Completed 500 Internal Server Error in 103ms
+
+ActionView::Template::Error (undefined method `button' for #<ActionView::Helpers::FormBuilder:0x007f8bb23ad140>):
+    29:   <% end %>
+    30: 
+    31:   <% if @plan.status == "Upcoming" %>
+    32: 	<%= f.button 'Images have been loaded into CDMS', :index %>
+    33:   <% end %>
+    34: <% end %>
+    35: 
+  app/views/plans/show.html.erb:32:in `block in _app_views_plans_show_html_erb__1516984477627461204_70118988191220'
+  app/views/plans/show.html.erb:18:in `_app_views_plans_show_html_erb__1516984477627461204_70118988191220'
+  app/controllers/plans_controller.rb:18:in `show'
+
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:35:57 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlan Load (8.8ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (90.1ms)
+Completed 500 Internal Server Error in 107ms
+
+ActionView::Template::Error (undefined method `button_to' for #<ActionView::Helpers::FormBuilder:0x007f8bb45d97f0>):
+    29:   <% end %>
+    30: 
+    31:   <% if @plan.status == "Upcoming" %>
+    32: 	<%= f.button_to 'Images have been loaded into CDMS', :index %>
+    33:   <% end %>
+    34: <% end %>
+    35: 
+  app/views/plans/show.html.erb:32:in `block in _app_views_plans_show_html_erb__1516984477627461204_70119013684700'
+  app/views/plans/show.html.erb:18:in `_app_views_plans_show_html_erb__1516984477627461204_70119013684700'
+  app/controllers/plans_controller.rb:18:in `show'
+
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:41:24 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlan Load (0.4ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:41:24 -0600
+Served asset /scaffolds.css - 304 Not Modified (35ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:41:24 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:41:24 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:41:24 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:41:24 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:41:24 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:41:24 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started PUT "/plans/2" for 127.0.0.1 at 2011-10-05 21:41:27 -0600
+  Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XjxpdDJ5Xr2BEgtks7kudfi/oTpDUlc0eQXS+Vi79jg=", "commit"=>"Images have been loaded into CDMS", "id"=>"2"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "2"]]
+Redirected to http://127.0.0.1:3000/plans/2
+Completed 302 Found in 12ms
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:41:27 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:41:27 -0600
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:41:27 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:41:27 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:41:27 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:41:27 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:41:27 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:41:27 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/plans/2" for 127.0.0.1 at 2011-10-05 21:41:40 -0600
+  Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XjxpdDJ5Xr2BEgtks7kudfi/oTpDUlc0eQXS+Vi79jg=", "commit"=>"Images have been loaded into CDMS", "id"=>"2"}
+  [1m[35mPlan Load (0.4ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "2"]]
+Redirected to http://127.0.0.1:3000/plans/2
+Completed 302 Found in 11ms
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:41:40 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:41:40 -0600
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:41:40 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:41:40 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:41:40 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:41:40 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:41:40 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:41:40 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 21:44:42 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.5ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:44:42 -0600
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:44:42 -0600
+Served asset /plans.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:44:42 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:44:42 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:44:42 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:44:42 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:44:42 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:45:10 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:10 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:10 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:10 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:10 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:10 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:10 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:10 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/plans/2" for 127.0.0.1 at 2011-10-05 21:45:12 -0600
+  Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XjxpdDJ5Xr2BEgtks7kudfi/oTpDUlc0eQXS+Vi79jg=", "commit"=>"Images have been loaded into CDMS", "id"=>"2"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "2"]]
+Redirected to http://127.0.0.1:3000/plans/2
+Completed 302 Found in 9ms
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:45:12 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:12 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:12 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:12 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:12 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:12 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:12 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:12 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 21:45:15 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:15 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:15 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:15 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:15 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:15 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:15 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:15 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:45:18 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:18 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:19 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:19 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:19 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:19 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:19 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:19 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/plans/2" for 127.0.0.1 at 2011-10-05 21:45:20 -0600
+  Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XjxpdDJ5Xr2BEgtks7kudfi/oTpDUlc0eQXS+Vi79jg=", "commit"=>"Images have been loaded into CDMS", "id"=>"2"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "2"]]
+Redirected to http://127.0.0.1:3000/plans/2
+Completed 302 Found in 9ms
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:45:20 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:20 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:20 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:20 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:20 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:20 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:20 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:20 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 21:45:22 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:22 -0600
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:22 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:22 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:22 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:22 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:22 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:22 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 21:45:34 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:34 -0600
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:34 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:34 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:34 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:34 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:34 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:34 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:45:35 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:35 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:35 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:35 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:35 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:35 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:35 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:35 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/plans/2" for 127.0.0.1 at 2011-10-05 21:45:37 -0600
+  Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XjxpdDJ5Xr2BEgtks7kudfi/oTpDUlc0eQXS+Vi79jg=", "commit"=>"Images have been loaded into CDMS", "id"=>"2"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Redirected to http://127.0.0.1:3000/plans/2
+Completed 302 Found in 10ms
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:45:37 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:37 -0600
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:37 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:37 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:37 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:37 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:37 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:37 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 21:45:38 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:38 -0600
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:38 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:38 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:38 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:38 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:45:38 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:45:38 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 21:46:39 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:46:39 -0600
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:46:39 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:39 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:39 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:39 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:46:39 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:39 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:46:41 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:46:41 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:46:41 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:46:41 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:41 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:41 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:41 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:41 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/plans/2" for 127.0.0.1 at 2011-10-05 21:46:44 -0600
+  Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XjxpdDJ5Xr2BEgtks7kudfi/oTpDUlc0eQXS+Vi79jg=", "commit"=>"Images have been loaded into CDMS", "id"=>"2"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.7ms)[0m  [1mUPDATE "plans" SET "status" = 'Needs Contours', "updated_at" = '2011-10-06 03:46:44.298503' WHERE "plans"."id" = 2[0m
+Redirected to http://127.0.0.1:3000/plans/2
+Completed 302 Found in 28ms
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2011-10-05 21:46:44 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered plans/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:46:44 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:46:44 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:46:44 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:44 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:44 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:44 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:44 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 21:46:45 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:46:45 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:46:45 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:45 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:45 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:46:45 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:45 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:46:45 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 21:47:30 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:47:30 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:30 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:47:30 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:30 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:30 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:47:30 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:30 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/plans/3" for 127.0.0.1 at 2011-10-05 21:47:32 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Rendered plans/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:47:32 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:47:32 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:47:32 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:32 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:32 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:32 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:32 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/plans/3" for 127.0.0.1 at 2011-10-05 21:47:34 -0600
+  Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XjxpdDJ5Xr2BEgtks7kudfi/oTpDUlc0eQXS+Vi79jg=", "commit"=>"Images have been loaded into CDMS", "id"=>"3"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.3ms)[0m  [1mUPDATE "plans" SET "status" = 'Loaded', "updated_at" = '2011-10-06 03:47:34.312763' WHERE "plans"."id" = 3[0m
+Redirected to http://127.0.0.1:3000/plans/3
+Completed 302 Found in 12ms
+
+
+Started GET "/plans/3" for 127.0.0.1 at 2011-10-05 21:47:34 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "3"]]
+Rendered plans/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:47:34 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:47:34 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:34 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:47:34 -0600
+Served asset /plans.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:34 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:34 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:34 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 21:47:35 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:47:35 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:47:35 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:47:35 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:35 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:35 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:35 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:47:35 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 21:53:38 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:53:38 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:53:38 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:53:38 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:53:38 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:53:38 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:53:38 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:53:38 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 21:53:40 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 21:53:40 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 21:53:40 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 21:53:40 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 21:53:40 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 21:53:40 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 21:53:40 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 21:53:40 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:05:07 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:07 -0600
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:07 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:07 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:07 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:07 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:07 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:07 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/plans/6" for 127.0.0.1 at 2011-10-05 22:05:09 -0600
+  Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XjxpdDJ5Xr2BEgtks7kudfi/oTpDUlc0eQXS+Vi79jg=", "commit"=>"Images have been loaded into CDMS", "id"=>"6"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.3ms)[0m  UPDATE "plans" SET "status" = 'Loaded', "updated_at" = '2011-10-06 04:05:09.538142' WHERE "plans"."id" = 6
+Redirected to http://127.0.0.1:3000/plans/6
+Completed 302 Found in 11ms
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:05:09 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:09 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:09 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:09 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:09 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:09 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:09 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:09 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:05:22 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:22 -0600
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:22 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:22 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:22 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:22 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:22 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:22 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:05:24 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:24 -0600
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:24 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:24 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:24 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:24 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:24 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:24 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/7" for 127.0.0.1 at 2011-10-05 22:05:26 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "7"]]
+Rendered plans/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:26 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:26 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:26 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:26 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:26 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:26 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:26 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/plans/7" for 127.0.0.1 at 2011-10-05 22:05:28 -0600
+  Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XjxpdDJ5Xr2BEgtks7kudfi/oTpDUlc0eQXS+Vi79jg=", "commit"=>"Images have been loaded into CDMS", "id"=>"7"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.3ms)[0m  UPDATE "plans" SET "status" = 'Loaded', "updated_at" = '2011-10-06 04:05:28.056733' WHERE "plans"."id" = 7
+Redirected to http://127.0.0.1:3000/plans/7
+Completed 302 Found in 34ms
+
+
+Started GET "/plans/7" for 127.0.0.1 at 2011-10-05 22:05:28 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "7"]]
+Rendered plans/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:28 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:28 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:28 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:28 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:28 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:05:28 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:05:28 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/7" for 127.0.0.1 at 2011-10-05 22:19:13 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "7"]]
+Rendered plans/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:13 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:13 -0600
+Served asset /plans.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:13 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:13 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:13 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:13 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:13 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/7" for 127.0.0.1 at 2011-10-05 22:19:44 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "7"]]
+Rendered plans/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:44 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:44 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:44 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:44 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:44 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:44 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:44 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:19:48 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:48 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:48 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:48 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:48 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:48 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:48 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:48 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/4" for 127.0.0.1 at 2011-10-05 22:19:50 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "4"]]
+Rendered plans/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:50 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:50 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:50 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:50 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:50 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:50 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:50 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:19:53 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:53 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:53 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:53 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:53 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:53 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:53 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:53 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:19:54 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:54 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:54 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:54 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:54 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:54 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:19:54 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:19:54 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:20:16 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:20:16 -0600
+Served asset /application.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:20:16 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:20:16 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:20:16 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:20:16 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:20:16 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:20:16 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:20:33 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:20:33 -0600
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:20:33 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:20:33 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:20:33 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:20:33 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:20:33 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:20:33 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:20:54 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:20:54 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:20:54 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:20:54 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:20:54 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:20:54 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:20:54 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:20:54 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:21:20 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:21:20 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:21:20 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:21:20 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:21:20 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:21:20 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:21:20 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:21:20 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:21:24 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:21:24 -0600
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:21:24 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:21:24 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:21:24 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:21:24 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:21:24 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:21:24 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:21:36 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "6"]]
+ERROR: compiling _app_views_plans_show_html_erb__1516984477627461204_70119013193540 RAISED /Users/ciboire/git/bmatrix/app/views/plans/show.html.erb:36: syntax error, unexpected ')'
+...g 'Submit comment', :style => );@output_buffer.safe_concat('
+...                               ^
+/Users/ciboire/git/bmatrix/app/views/plans/show.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/Users/ciboire/git/bmatrix/app/views/plans/show.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/ciboire/git/bmatrix/app/views/plans/show.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_plans_show_html_erb__1516984477627461204_70119013193540(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "plans/show";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<p id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Target:</b>
+  ');@output_buffer.append= ( @plan.target );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Lastname:</b>
+  ');@output_buffer.append= ( @plan.lastname );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Firstname:</b>
+  ');@output_buffer.append= ( @plan.firstname );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+');@output_buffer.append=  form_for(@plan) do |f| @output_buffer.safe_concat('
+');   if @plan.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@plan.errors.count, "error") );@output_buffer.safe_concat(' prohibited this plan from being saved:</h2>
+
+      <ul>
+');       @plan.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+');   if @plan.status == "Upcoming" 
+@output_buffer.safe_concat('	');@output_buffer.append= ( submit_tag 'Images have been loaded into CDMS' );@output_buffer.safe_concat('
+');   end 
+@output_buffer.safe_concat('
+  ');@output_buffer.append= ( text_area_tag :comment, nil, :cols => 100, :rows => 4 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( submit_tag 'Submit comment', :style => );@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('
+');@output_buffer.append= ( link_to 'Back', plans_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/ciboire/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:195:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+/Users/ciboire/git/bmatrix/app/controllers/plans_controller.rb:18:in `show'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__1601024472279591995__process_action__3970730289743455724__callbacks'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.4/lib/rack/etag.rb:23:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.4/lib/rack/conditionalget.rb:25:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.4/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.4/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.4/lib/rack/sendfile.rb:101:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.4/lib/rack/methodoverride.rb:24:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.4/lib/rack/runtime.rb:17:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.4/lib/rack/lock.rb:15:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.4/lib/rack/handler/webrick.rb:59:in `service'
+/Users/ciboire/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/ciboire/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/ciboire/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered plans/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (/Users/ciboire/git/bmatrix/app/views/plans/show.html.erb:36: syntax error, unexpected ')'
+...g 'Submit comment', :style => );@output_buffer.safe_concat('
+...                               ^
+/Users/ciboire/git/bmatrix/app/views/plans/show.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/Users/ciboire/git/bmatrix/app/views/plans/show.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/ciboire/git/bmatrix/app/views/plans/show.html.erb:43: syntax error, unexpected keyword_end, expecting ')'):
+    33:   <% end %>
+    34: 
+    35:   <%= text_area_tag :comment, nil, :cols => 100, :rows => 4 %>
+    36:   <%= submit_tag 'Submit comment', :style => %>
+    37: <% end %>
+    38: 
+    39: <%= link_to 'Back', plans_path %>
+  app/controllers/plans_controller.rb:18:in `show'
+
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/ciboire/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:21:46 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:21:46 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:21:46 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:21:46 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:21:46 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:21:46 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:21:46 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:21:46 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:22:22 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:22:22 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:22:22 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:22:22 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:22 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:22 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:22 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:22 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:22:24 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:22:24 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:22:24 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:24 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:24 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:24 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:22:24 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:24 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:22:37 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:22:37 -0600
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:22:37 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:22:37 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:37 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:37 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:37 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:37 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/plans/6" for 127.0.0.1 at 2011-10-05 22:22:57 -0600
+  Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XjxpdDJ5Xr2BEgtks7kudfi/oTpDUlc0eQXS+Vi79jg=", "comment"=>"sdkfslkdjflsjd kdj fkjd kfj ksj dfklsdj f", "commit"=>"Submit comment", "id"=>"6"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "6"]]
+Redirected to http://127.0.0.1:3000/plans/6
+Completed 302 Found in 10ms
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:22:57 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:22:57 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:22:57 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:22:57 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:57 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:57 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:57 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:22:57 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:27:09 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:27:09 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:27:09 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:27:09 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:27:09 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:27:09 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:27:09 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:27:09 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:27:25 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:27:25 -0600
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:27:25 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:27:25 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:27:25 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:27:25 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:27:25 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:27:25 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2011-10-05 22:27:59 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "6"]]
+Rendered plans/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:27:59 -0600
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:27:59 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:27:59 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:27:59 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:27:59 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:27:59 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:27:59 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:28:12 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:28:12 -0600
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:28:12 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:28:12 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:28:12 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:28:12 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:28:12 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:28:12 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:29:16 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (13.7ms)
+Compiled scaffolds.css  (16ms)  (pid 19835)
+Compiled application.css  (1ms)  (pid 19835)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:29:16 -0600
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:29:16 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:29:16 -0600
+Served asset /scaffolds.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:29:16 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:29:16 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:29:16 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:29:16 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:30:22 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (38.2ms)
+Compiled plans.css  (6ms)  (pid 19835)
+Compiled application.css  (1ms)  (pid 19835)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:30:23 -0600
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:30:23 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:30:23 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:30:23 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:30:23 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:30:23 -0600
+Served asset /plans.css - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:30:23 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/3" for 127.0.0.1 at 2011-10-05 22:30:39 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "3"]]
+Rendered plans/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:30:39 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:30:39 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:30:39 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:30:39 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:30:39 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:30:39 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:30:39 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:30:47 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:30:47 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:30:47 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:30:47 -0600
+Served asset /plans.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:30:47 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:30:47 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:30:47 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:30:47 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:31:01 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (13.5ms)
+Compiled plans.css  (6ms)  (pid 19835)
+Compiled application.css  (1ms)  (pid 19835)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:31:01 -0600
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:31:01 -0600
+Served asset /plans.css - 200 OK (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:31:01 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:31:01 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:31:01 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:31:01 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:31:01 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:31:07 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (15.6ms)
+Compiled plans.css  (6ms)  (pid 19835)
+Compiled application.css  (2ms)  (pid 19835)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:31:07 -0600
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:31:07 -0600
+Served asset /plans.css - 200 OK (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:31:07 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:31:07 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:31:07 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:31:07 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:31:07 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:31:59 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (39.1ms)
+Compiled plans.css  (6ms)  (pid 19835)
+Compiled scaffolds.css  (10ms)  (pid 19835)
+Compiled application.css  (1ms)  (pid 19835)
+Completed 200 OK in 73ms (Views: 71.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:31:59 -0600
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:31:59 -0600
+Served asset /plans.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:31:59 -0600
+Served asset /scaffolds.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:31:59 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:31:59 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:31:59 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:31:59 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:32:55 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (13.9ms)
+Compiled plans.css  (5ms)  (pid 19835)
+Compiled scaffolds.css  (12ms)  (pid 19835)
+Compiled application.css  (1ms)  (pid 19835)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:32:55 -0600
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:32:55 -0600
+Served asset /plans.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:32:55 -0600
+Served asset /scaffolds.css - 200 OK (31ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:32:55 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:32:55 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:32:55 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:32:55 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/7" for 127.0.0.1 at 2011-10-05 22:32:58 -0600
+  Processing by PlansController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT 1  [["id", "7"]]
+Rendered plans/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:32:58 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:32:58 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:32:58 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:32:58 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:32:58 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:32:58 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:32:58 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:33:01 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:33:01 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:33:01 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:33:01 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:33:01 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:33:01 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:33:01 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:33:01 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:33:17 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (13.8ms)
+Compiled scaffolds.css  (12ms)  (pid 19835)
+Compiled application.css  (1ms)  (pid 19835)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:33:17 -0600
+Served asset /application.css - 200 OK (11ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:33:17 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:33:17 -0600
+Served asset /scaffolds.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:33:17 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:33:17 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:33:17 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:33:17 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:33:40 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (40.0ms)
+Compiled plans.css  (6ms)  (pid 19835)
+Compiled scaffolds.css  (9ms)  (pid 19835)
+Compiled application.css  (1ms)  (pid 19835)
+Completed 200 OK in 74ms (Views: 72.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:33:40 -0600
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:33:40 -0600
+Served asset /plans.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:33:40 -0600
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:33:40 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:33:41 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:33:41 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:33:41 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:34:10 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (13.9ms)
+Compiled plans.css  (6ms)  (pid 19835)
+Compiled application.css  (1ms)  (pid 19835)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:34:10 -0600
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:34:10 -0600
+Served asset /plans.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:34:10 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:34:10 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:34:10 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:34:10 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:34:10 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:35:20 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (13.9ms)
+Compiled plans.css  (8ms)  (pid 19835)
+Compiled application.css  (1ms)  (pid 19835)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:35:20 -0600
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:35:20 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:35:20 -0600
+Served asset /plans.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:20 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:20 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:20 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:20 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:35:23 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:35:23 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:35:23 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:23 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:23 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:35:23 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:23 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:23 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:35:36 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (16.4ms)
+Compiled plans.css  (9ms)  (pid 19835)
+Compiled application.css  (1ms)  (pid 19835)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:35:36 -0600
+Served asset /application.css - 200 OK (11ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:35:36 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:36 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:36 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:35:36 -0600
+Served asset /plans.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:36 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:36 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:35:44 -0600
+  Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.1ms)[0m  SELECT "plans".* FROM "plans" 
+Rendered plans/index.html.erb within layouts/application (15.5ms)
+Compiled plans.css  (6ms)  (pid 19835)
+Compiled application.css  (1ms)  (pid 19835)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:35:44 -0600
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:35:44 -0600
+Served asset /plans.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:35:44 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:44 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:44 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:44 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:35:44 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2011-10-05 22:36:47 -0600
+  Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Rendered plans/index.html.erb within layouts/application (13.9ms)
+Compiled plans.css  (32ms)  (pid 19835)
+Compiled application.css  (1ms)  (pid 19835)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:36:47 -0600
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:36:47 -0600
+Served asset /plans.css - 200 OK (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:36:47 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:36:47 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:36:47 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:36:47 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:36:47 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2011-10-05 22:37:00 -0600
+  Processing by PlansController#new as HTML
+Rendered plans/_form.html.erb (9.7ms)
+Rendered plans/new.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-05 22:37:00 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2011-10-05 22:37:00 -0600
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-05 22:37:00 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-05 22:37:00 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2011-10-05 22:37:00 -0600
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-05 22:37:00 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-05 22:37:00 -0600
+Served asset /application.js - 304 Not Modified (0ms)
