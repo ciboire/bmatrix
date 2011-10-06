@@ -1,0 +1,40 @@
+<h1>Dosimetry Matrix</h1>
+
+
+
+<table>
+  <tr>
+    <th>Loaded</th>
+    <th class="even">Need Contours</th>
+    <th>Need Plan</th>
+    <th class="even">Need Approval</th>
+    <th>Need Finalizing</th>
+    <th>Finalized</th>
+  </tr>
+
+<% @plans.each do |plan| %>
+<% @identifier = "#{plan.lastname}, #{plan.firstname[0]} <br />(#{plan.target})" %>
+  <tr>
+    <td><%= link_to raw(@identifier), plan if plan.status == 'Loaded' %></td>
+	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Needs Contours' %></td>
+	<td><%= link_to raw(@identifier), plan if plan.status == 'Needs Plan' %></td>
+	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Needs Approval' %></td>
+	<td><%= link_to raw(@identifier), plan if plan.status == 'Needs Finalizing' %></td>
+	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Finalized' %></td>
+    <% link_to 'Edit', edit_plan_path(plan) %>
+    <% link_to 'Destroy', plan, confirm: 'Are you sure?', method: :delete %>
+  </tr>
+<% end %>
+</table>
+
+<div class="upcoming">
+	<h3> Upcoming plans... </h3>
+	<% @plans.each do |plan| %>
+		<% if plan.status == 'Upcoming' %>
+			<%= link_to "#{plan.lastname}, #{plan.firstname[0]} (#{plan.target})", plan %> <br />
+		<% end %>
+	<% end %>
+	<br /><br />
+	<b><%= link_to 'New Plan', new_plan_path %></b>
+</div>
+

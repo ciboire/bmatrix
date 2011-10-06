@@ -1,0 +1,55 @@
+// Place all the styles related to the Plans controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+th {
+width: 130px;
+text-align: left;
+padding: 5px;
+margin-bottom: 20px;
+border-bottom: 1px solid #bbb;
+}
+
+td {
+padding: 5px;
+padding-bottom: 10px;
+padding-top: 10px;
+}
+
+
+table {
+border-spacing: 0;
+margin-top: 40px;
+}
+
+th.even {
+background-color: #e2e2e2
+}
+
+td.even {
+background-color: #e2e2e2
+}
+
+
+table a {
+  display: block;
+  border: 1px solid #bbb;
+  padding: 5px;
+  text-decoration: none;
+  color: #000;
+  &:hover {
+    color: white;
+    border: 1px solid black; } }
+
+.upcoming {
+display: block;
+width: 790px;
+line-height: 1.8em;
+padding-left: 40px;
+padding-right: 40px;
+padding-bottom: 20px;
+padding-top: 0px;
+border: 1px solid #bbb;
+margin-bottom: 70px;
+margin-top: 50px;
+}
