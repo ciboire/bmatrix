@@ -1,6 +1,9 @@
 class Plan < ActiveRecord::Base
+  has_many :comments
   STATUS = ['Upcoming', 'Loaded', 'Needs Contours', 'Needs Plan', 'Needs Approval', 'Needs Finalizing', 'Finalized']
-  ATTENDING = ['Lee McNeely, MD', 'Kelley Simpson, MD']
+  ATTENDING = ['Lee McNeely, MD', 'Kelley Simpson, MD', 'Brian Fuller, MD', 'Elizabeth Ceilley, MD']
+  RECIPIENTS = ['brian.thorndyke@coloradocyberknife.com', 'kelley.simpson@coloradocyberknife.com', 
+    'lee.mcneely@coloradocyberknife.com', 'ruby.givens@coloradocyberknife.com', 'melinda.macintyre@coloradocyberknife.com']
   
   def timestring
     current = Time.now

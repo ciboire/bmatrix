@@ -13,7 +13,8 @@ class CreatePlans < ActiveRecord::Migration
       t.datetime :when_needs_approval
       t.datetime :when_needs_finalizing
       t.datetime :when_finalized
-
+      t.boolean :is_active, :default => true
+      t.text :maillist, :default => "brian.thorndyke@coloradocyberknife.com"
       t.timestamps
     end
   end

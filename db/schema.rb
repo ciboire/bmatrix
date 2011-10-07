@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111005200949) do
+ActiveRecord::Schema.define(:version => 20111007151331) do
+
+  create_table "comments", :force => true do |t|
+    t.text     "content"
+    t.integer  "plan_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "histories", :force => true do |t|
+    t.string   "action"
+    t.integer  "reference_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "plans", :force => true do |t|
     t.string   "target"
@@ -26,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20111005200949) do
     t.datetime "when_needs_approval"
     t.datetime "when_needs_finalizing"
     t.datetime "when_finalized"
+    t.boolean  "is_active",             :default => true
+    t.text     "maillist",              :default => "brian.thorndyke@coloradocyberknife.com"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

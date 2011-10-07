@@ -1,5 +1,7 @@
 Bmatrix::Application.routes.draw do
   resources :plans
+  
+  match 'deactivate/:id' => 'plans#deactivate', :as => :deactivate
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -51,6 +53,8 @@ Bmatrix::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
+  
+  root :to => 'plans#index'
 
   # See how all your routes lay out with "rake routes"
 
