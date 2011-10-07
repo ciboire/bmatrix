@@ -1,21 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Back', plans_path %>
+<%= link_to '< Back', plans_path %>
 
-<p>
-  <b>Target:</b>
-  <%= @plan.target %>
-</p>
-
-<p>
-  <b>Lastname:</b>
-  <%= @plan.lastname %>
-</p>
-
-<p>
-  <b>Firstname:</b>
-  <%= @plan.firstname %>
-</p>
+<div class="show">
+	<div class="name"><%= "#{@plan.lastname}, #{@plan.firstname}" -%></div>
+	<div class="target"><%= "#{@plan.target}" -%></div>
+</div>
 
 <%= form_for(@plan) do |f| %>
   <% if @plan.errors.any? %>
@@ -30,16 +20,74 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :status %><br />
-	<%= f.select(:status, Plan::STATUS) %>
+  <div class="modifications">
+	
+  <div class="label">Creekside Attending</div><div class="enter">
+	<%= f.select(:attending, Plan::ATTENDING, :selected => @plan.attending) %>
   </div>
 
-  <%= f.label 'Comment' %> <br />
-  <%= text_area_tag :comment, nil, :cols => 100, :rows => 4 %>
-  <br />
-  <br />
-  <%= submit_tag 'Submit' %>
+  <% if @plan.status == "Upcoming" %>
+  	<%= radio_button_tag :status, "nochange", true %> 
+	<div class="radiotext"> Plan is still upcoming </div><br /><br />
+    <%= radio_button_tag :status, "Loaded", false %>
+	<div class="radiotext"> Patient scans for this plan have been uploaded into CDMS </div>
+  <% end %>
+
+  <% if @plan.status == "Loaded" %>
+  	<%= radio_button_tag :status, "nochange", true %> 
+	<div class="radiotext"> Scans are not yet ready for contouring </div><br /><br />
+    <%= radio_button_tag :status, "Needs Contours", false %>
+	<div class="radiotext"> Scans are fused (if applicable) and ready for contouring</div>
+  <% end %>
+
+  <% if @plan.status == "Needs Contours" %>
+  	<%= radio_button_tag :status, "nochange", true %> 
+	<div class="radiotext"> Contouring is still in progress </div><br /><br />
+    <%= radio_button_tag :status, "Needs Plan", false %>
+	<div class="radiotext"> Contours are finished and ready for planning</div>
+  <% end %>
+
+  <% if @plan.status == "Needs Plan" %>
+  	<%= radio_button_tag :status, "nochange", true %> 
+	<div class="radiotext"> Planing is still in progress </div><br /><br />
+    <%= radio_button_tag :status, "Needs Approval", false %>
+	<div class="radiotext"> Plan is finished and ready for review / approval</div>
+  <% end %>
+
+  <% if @plan.status == "Needs Approval" %>
+  	<%= radio_button_tag :status, "nochange", true %> 
+	<div class="radiotext"> Plan review is still in progress </div><br /><br />
+	<%= radio_button_tag :status, "Needs Plan", false %> 
+	<div class="radiotext"> Plan is not approved; <i>re-planning needed</i></div><br /><br />
+    <%= radio_button_tag :status, "Needs Finalizing", false %>
+	<div class="radiotext"> Plan is approved and ready to be finalized</div>
+  <% end %>
+
+  <% if @plan.status == "Needs Finalizing" %>
+  	<%= radio_button_tag :status, "nochange", true %> 
+	<div class="radiotext"> Finalizing still in progress </div><br /><br />
+	<%= radio_button_tag :status, "Needs Approval", false %> 
+	<div class="radiotext"> Problems discovered requiring minor revisions; <i>re-approval needed</i></div><br /><br />
+	<%= radio_button_tag :status, "Needs Plan", false %> 
+	<div class="radiotext"> Problems discovered requiring significant revisions; <i>re-planning needed</i></div><br /><br />
+    <%= radio_button_tag :status, "Finalized", false %>
+	<div class="radiotext"> Plan is finalized and ready for treatment</div>
+  <% end %>
+
+  <% if @plan.status == "Finalized" %>
+	<b>Plan is finalized and ready for treatment.</b><br /><br />
+  <% end %>
+
+  <div class="comment">
+  	<%= f.label 'Comment' %> <br />
+  	<%= text_area_tag :comment, nil, :cols => 100, :rows => 4 %>
+  </div>
+
+  <div class="submit">
+  	<%= submit_tag 'Submit' %>
+  </div>
+
+  </div>
 <% end %>
 
 

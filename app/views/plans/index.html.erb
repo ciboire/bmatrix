@@ -1,9 +1,12 @@
+<meta http-equiv="refresh" content="150;url=http://127.0.0.1:3000/plans">
+
 <h1>Dosimetry Matrix</h1>
 
 
 
 <table>
   <tr>
+	<th class="even"><font style="font-weight:normal">&Delta;T since loaded</font></th>
     <th>Loaded</th>
     <th class="even">Need Contours</th>
     <th>Need Plan</th>
@@ -13,8 +16,14 @@
   </tr>
 
 <% @plans.each do |plan| %>
-<% @identifier = "#{plan.lastname}, #{plan.firstname[0]} <br />(#{plan.target})" %>
+<% @identifier = "<b><span style=\"font-size:9pt\">#{plan.lastname[0..11]} #{plan.firstname[0]}</span></b> <br /><span style=\"font-size:8pt\">#{plan.target[0..20]}</span><br />" + "<span style=\"font-size:8pt\">#{plan.timestring}</span>" %>
+<% @days = ((Time.now - plan.when_loaded) / 24.hour).floor %>
+<% @hours = (((Time.now - plan.when_loaded) / 1.hour) % 24).floor %>
   <tr>
+	<td class="even">
+		<%= @days > 0 ? (@days > 1 ? "#{@days} days " : "#{@days} day ") : nil -%>
+		<%= @hours == 1 ? "#{@hours} hr" : "#{@hours} hrs" -%>
+	</td>
     <td><%= link_to raw(@identifier), plan if plan.status == 'Loaded' %></td>
 	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Needs Contours' %></td>
 	<td><%= link_to raw(@identifier), plan if plan.status == 'Needs Plan' %></td>
@@ -28,13 +37,13 @@
 </table>
 
 <div class="upcoming">
-	<h3> Upcoming plans... </h3>
-	<% @plans.each do |plan| %>
+	<h3> Upcoming plans... </h3><br />
+	<% @plans_upcoming.each do |plan| %>
 		<% if plan.status == 'Upcoming' %>
-			<%= link_to "#{plan.lastname}, #{plan.firstname[0]} (#{plan.target})", plan %> <br />
+			<%= link_to raw("<b>#{plan.lastname} #{plan.firstname[0]}</b> (#{plan.target})"), plan %> <br />
 		<% end %>
 	<% end %>
 	<br /><br />
-	<b><%= link_to 'New Plan', new_plan_path %></b>
+	<%= link_to 'New Plan', new_plan_path %>
 </div>
 

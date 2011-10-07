@@ -1,5 +1,42 @@
 <h1>New plan</h1>
 
-<%= render 'form' %>
+<%= link_to '< Back', plans_path %>
 
-<%= link_to 'Back', plans_path %>
+
+<div class="newplan">
+<%= form_for(@plan) do |f| %>
+  <% if @plan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
+
+      <ul>
+      <% @plan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="show">
+	<div class="name">
+		<div class="label">Creekside Attending</div><div class="enter"><%= f.select(:attending, Plan::ATTENDING) %></div>
+	</div>
+	<div class="name">
+		<div class="label">First name</div><div class="enter"><%= f.text_field :firstname %></div>
+	</div>
+	<div class="name">
+		<div class="label">Last name</div><div class="enter"><%= f.text_field :lastname %></div>
+	</div>
+	<div class="name">
+		<div class="label">Target</div><div class="enter"><%= f.text_field :target %></div>
+	</div>
+
+
+  	<div class="actions">
+    	<%= f.submit "Submit as upcoming" %>
+  	</div>
+<% end %>
+
+</div>
+
+

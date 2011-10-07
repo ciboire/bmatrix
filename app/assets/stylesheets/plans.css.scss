@@ -23,11 +23,11 @@ margin-top: 40px;
 }
 
 th.even {
-background-color: #e2e2e2
+background-color: #fff8dc
 }
 
 td.even {
-background-color: #e2e2e2
+background-color: #fff8dc
 }
 
 table a {
@@ -50,4 +50,63 @@ padding-top: 0px;
 border: 1px solid #bbb;
 margin-bottom: 70px;
 margin-top: 50px;
+}
+
+.show {
+margin-top: 30px;
+}
+
+.show .name {
+font-size: 20pt;
+margin-bottom: 40px;
+font-weight: bold
+}
+
+.show .name .label {
+font-size: 10pt;
+}
+
+.show .name .enter {
+margin-top: -10px;
+}
+
+.comment {
+margin-top: 30px;
+}
+
+.submit {
+padding-top: 30px
+}
+
+.modifications {
+width: 790px;
+border: 1px solid #666;
+padding: 25px;
+margin-top: 50px;
+}
+
+.modifications .label {
+font-size: 10pt;
+margin-bottom: 5px;
+}
+
+.modifications .enter {
+margin-bottom: 40px
+}
+
+.show .target {
+font-size: 18pt;
+margin-bottom: 30px;
+margin-top: -20px
+}
+
+.radiotext {
+display: inline-block
+}
+
+.newplan {
+width: 790px;
+border: 1px solid #666;
+padding: 25px;
+margin-top: 50px
 }
