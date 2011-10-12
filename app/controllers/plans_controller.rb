@@ -75,17 +75,29 @@ class PlansController < ApplicationController
       @message_short = "Ready for contouring"
       @message_long = "Scans are ready for contouring."
     when 'Needs Plan'
+      @prev_status = @plan.status
       @plan.status = 'Needs Plan'
       @plan.when_needs_plan = Time.now
       @history = History.create(:action => "needs plan", :reference_id => @plan.id)
-      @message_short = "Ready for planning"
-      @message_long = "Contours are finished and ready for planning."
+      if @prev_status == 'Needs Approval'
+        @message_short = "Requires replanning"
+        @message_long = "Plan encountered problems and requires replanning."
+      else
+        @message_short = "Ready for planning"
+        @message_long = "Contours are finished and ready for planning."
+      end
     when 'Needs Approval'
+      @prev_status = @plan.status
       @plan.status = 'Needs Approval'
       @plan.when_needs_approval = Time.now
       @history = History.create(:action => "needs approval", :reference_id=> @plan.id)
-      @message_short = "Ready for review"
-      @message_long = "Plan is finished and ready for review / approval."
+      if @prev_status == 'Needs Finalizing'
+        @message_short = 'Needs re-approval'
+        @message_long = 'Finalizing revealed problems and plan needs re-approval.'
+      else
+        @message_short = "Ready for review"
+        @message_long = "Plan is finished and ready for review / approval."
+      end
     when 'Needs Finalizing'
       @plan.status = 'Needs Finalizing'
       @plan.when_needs_finalizing = Time.now
