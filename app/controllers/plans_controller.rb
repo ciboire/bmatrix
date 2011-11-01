@@ -39,6 +39,7 @@ class PlansController < ApplicationController
   def create
     @plan = Plan.new(params[:plan])
     @plan.when_upcoming = Time.now
+    @plan.maillist = "brian.thorndyke@coloradocyberknife.com, ruby.givens@coloradocyberknife.com, kelley.simpson@coloradocyberknife.com, lee.mcneely@coloradocyberknife.com"
 
     respond_to do |format|
       if @plan.save
