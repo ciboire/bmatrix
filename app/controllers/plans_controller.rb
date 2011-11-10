@@ -27,7 +27,7 @@ class PlansController < ApplicationController
   # GET /plans/new.json
   def new
     @plan = Plan.new
-    @plan.maillist = "brian.thorndyke@coloradocyberknife.com, ruby.givens@coloradocyberknife.com, kelley.simpson@coloradocyberknife.com, lee.mcneely@coloradocyberknife.com"
+    @plan.maillist = "brian.thorndyke@coloradocyberknife.com, jody.bredensteiner@coloradocyberknife.com, kelley.simpson@coloradocyberknife.com, lee.mcneely@coloradocyberknife.com"
     
     respond_to do |format|
       format.html # new.html.erb
