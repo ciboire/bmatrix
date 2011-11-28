@@ -46,7 +46,7 @@ class PlansController < ApplicationController
         @history = History.create(:action => "new", :reference_id => @plan.id)
         @message_short = "Upcoming..."
         @message_long = "Patient / plan is upcoming.  Stay tuned!"
-        UserMailer.status_email(@plan, @message_short, @message_long).deliver
+        #UserMailer.status_email(@plan, @message_short, @message_long).deliver
         format.html { redirect_to plans_url, notice: 'Plan was successfully created.' }
         format.json { render json: @plan, status: :created, location: @plan }
       else
@@ -121,7 +121,7 @@ class PlansController < ApplicationController
     end
     
     if @message_long != ""
-      UserMailer.status_email(@plan, @message_short, @message_long).deliver
+      #UserMailer.status_email(@plan, @message_short, @message_long).deliver
     end
       
     respond_to do |format|
