@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.statustitle {
+	font-size: 13pt;
+	margin: 15px;
+	margin-left: 0px;
+}
+
 th {
 width: 130px;
 text-align: left;
@@ -41,7 +47,7 @@ table a {
 
 .upcoming {
 display: block;
-width: 790px;
+width: 780px;
 line-height: 1.8em;
 padding-left: 40px;
 padding-right: 40px;
@@ -79,7 +85,7 @@ padding-top: 30px
 }
 
 .modifications {
-width: 790px;
+width: 780px;
 border: 1px solid #666;
 padding: 25px;
 margin-top: 50px;
@@ -101,7 +107,7 @@ margin-top: -20px
 }
 
 .radiotext {
-display: inline-block
+display: inline-block;
 }
 
 .newplan {

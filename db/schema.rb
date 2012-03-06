@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111007151331) do
+ActiveRecord::Schema.define(:version => 20111007151153) do
 
   create_table "comments", :force => true do |t|
     t.text     "content"
@@ -20,28 +20,23 @@ ActiveRecord::Schema.define(:version => 20111007151331) do
     t.datetime "updated_at"
   end
 
-  create_table "histories", :force => true do |t|
-    t.string   "action"
-    t.integer  "reference_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "plans", :force => true do |t|
     t.string   "target"
     t.string   "lastname"
     t.string   "firstname"
-    t.string   "status",                :default => "Upcoming"
-    t.string   "attending"
+    t.string   "status",                   :default => "Upcoming"
     t.datetime "when_upcoming"
-    t.datetime "when_loaded"
-    t.datetime "when_needs_contours"
+    t.datetime "when_needs_image_review"
+    t.datetime "when_needs_setup"
+    t.datetime "when_needs_preparation"
+    t.datetime "when_needs_md_contours"
     t.datetime "when_needs_plan"
     t.datetime "when_needs_approval"
     t.datetime "when_needs_finalizing"
-    t.datetime "when_finalized"
-    t.boolean  "is_active",             :default => true
-    t.text     "maillist",              :default => "brian.thorndyke@coloradocyberknife.com"
+    t.datetime "when_ready_for_treatment"
+    t.datetime "when_in_treatment"
+    t.datetime "when_finished_treatment"
+    t.boolean  "is_active",                :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
   end

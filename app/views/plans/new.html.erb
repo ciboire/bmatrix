@@ -19,13 +19,6 @@
 
   <div class="show">
 	<div class="name">
-		<div class="label">Creekside Attending</div><div class="enter"><%= f.select(:attending, Plan::ATTENDING) %></div>
-	</div>
-	<div class="name">
-		<div class="label">Mailing list (comma-separated)</div>
-		<div class="enter" style="margin-top: 2px"><%= f.text_area :maillist, :cols => 100, :rows => 4 -%></div>
-	</div>
-	<div class="name">
 		<div class="label">First name</div><div class="enter"><%= f.text_field :firstname, :size => 50 %></div>
 	</div>
 	<div class="name">
@@ -35,9 +28,8 @@
 		<div class="label">Target</div><div class="enter"><%= f.text_field :target, :size => 50 %></div>
 	</div>
 
-
   	<div class="actions">
-    	<%= f.submit "Submit as upcoming" %>
+    	<%= f.submit "Submit as potentially upcoming" %>
   	</div>
 <% end %>
 
