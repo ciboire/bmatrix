@@ -4,17 +4,18 @@
 
 <table>
   <tr>
-	<th class="even"><font style="font-weight:normal">&Delta;T since Osirix</font></th>
-    <th>Need Image Review</th>
-    <th class="even">Need Setup</th>
-    <th>Need Preparation</th>
-    <th class="even">Need MD Contours</th>
-    <th>Need Plan</th>
-    <th class="even">Need Approval</th>
-    <th>Need Finalizing</th>
-    <th class="even">Ready for Treatment</th>
-    <th>In Treatment</th>
-    <th class="even">Finished Treatment</th>
+	<th class="even"><font style="font-weight:normal">&Delta;T since 1<sup>st</sup> record</font></th>
+    <th>Needs Records Review</th>
+		<th class="even">Waiting for Consult</th>
+    <th>Waiting for Setup</th>
+    <th class="even">Needs Dosimetry Prep</th>
+    <th>Needs MD Contours</th>
+    <th class="even">Needs Plan</th>
+    <th>Needs Approval</th>
+    <th class="even">Needs Finalizing</th>
+    <th>Ready for Treatment</th>
+    <th class="even">In Treatment</th>
+    <th>Finished Treatment</th>
   </tr>
 
 <% @plans.each do |plan| %>
@@ -26,16 +27,17 @@
 		<%= @days > 0 ? (@days > 1 ? "#{@days} days " : "#{@days} day ") : nil -%>
 		<%= @hours == 1 ? "#{@hours} hr" : "#{@hours} hrs" -%>
 	</td>
-  <td><%= link_to raw(@identifier), plan if plan.status == 'Needs Image Review' %></td>
-	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Needs Setup' %></td>
-	<td><%= link_to raw(@identifier), plan if plan.status == 'Needs Preparation' %></td>
-	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Needs MD Contours' %></td>
-	<td><%= link_to raw(@identifier), plan if plan.status == 'Needs Plan' %></td>
-	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Needs Approval' %></td>
-	<td><%= link_to raw(@identifier), plan if plan.status == 'Needs Finalizing' %></td>
-	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Ready for Treatment' %></td>
-	<td><%= link_to raw(@identifier), plan if plan.status == 'In Treatment' %></td>
-	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Finished Treatment' %></td>
+  <td><%= link_to raw(@identifier), plan if plan.status == 'Needs Records Review' %></td>
+  <td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Waiting for Consult' %></td>
+	<td><%= link_to raw(@identifier), plan if plan.status == 'Waiting for Setup' %></td>
+	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Needs Dosimetry Prep' %></td>
+	<td><%= link_to raw(@identifier), plan if plan.status == 'Needs MD Contours' %></td>
+	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Needs Plan' %></td>
+	<td><%= link_to raw(@identifier), plan if plan.status == 'Needs Approval' %></td>
+	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'Needs Finalizing' %></td>
+	<td><%= link_to raw(@identifier), plan if plan.status == 'Ready for Treatment' %></td>
+	<td class="even"><%= link_to raw(@identifier), plan if plan.status == 'In Treatment' %></td>
+	<td><%= link_to raw(@identifier), plan if plan.status == 'Finished Treatment' %></td>
   </tr>
 <% end %>
 </table>

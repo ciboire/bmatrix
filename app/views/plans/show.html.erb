@@ -20,11 +20,20 @@
     	</div>
   	<% end %>
 
+		<div class="attending">
+			<span class="label">Attending MD:&nbsp;&nbsp;</span>
+			<span class="enter"><%= f.text_field :attending_md, :size => 30 %></span>
+		</div>
+
+
   	<div class="modifications">
 	
 			<div class="statustitle"><%= @plan.status -%></div>
+			
+
 	
-			<% status_list = ['Upcoming', 'Needs Image Review', 'Needs Setup', 'Needs Preparation', 'Needs MD Contours', 
+			<% status_list = ['Upcoming', 'Needs Records Review', 'Waiting for Consult', 
+				'Waiting for Setup', 'Needs Dosimetry Prep', 'Needs MD Contours', 
 				'Needs Plan', 'Needs Approval', 'Needs Finalizing', 'Ready for Treatment', 'In Treatment',
 				'Finished Treatment'] %>
 			

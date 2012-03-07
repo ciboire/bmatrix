@@ -57,11 +57,13 @@ class PlansController < ApplicationController
     @plan = Plan.find(params[:id])
     @plan.status = params[:status]
     case @plan.status
-    when 'Needs Image Review'
+    when 'Needs Records Review'
       @plan.when_needs_image_review = Time.now
-    when 'Needs Setup'
+    when 'Waiting for Consult'
+      @plan.when_waiting_for_consult = Time.now
+    when 'Waiting for Setup'
       @plan.when_needs_setup = Time.now
-    when 'Needs Preparation'
+    when 'Needs MultiPlan Prep'
       @plan.when_needs_preparation = Time.now      
     when 'Needs MD Contours'
       @plan.when_needs_md_contours = Time.now

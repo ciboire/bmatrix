@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111007151153) do
+ActiveRecord::Schema.define(:version => 20120306222700) do
 
   create_table "comments", :force => true do |t|
     t.text     "content"
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(:version => 20111007151153) do
     t.boolean  "is_active",                :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "when_waiting_for_consult"
+    t.string   "attending_md"
   end
 
 end
