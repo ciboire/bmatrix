@@ -31,6 +31,12 @@
 	<div class="name">
 		<div class="label">Target</div><div class="enter"><%= f.text_field :target, :size => 50 %></div>
 	</div>
+	
+	<div class="comment" style="padding-bottom:25px">
+			<%= f.label 'Comments' %> <br />
+			<%= text_area_tag :comment, nil, :cols => 100, :rows => 4 %>
+		</div>
+		
 
   	<div class="actions">
     	<%= f.submit "Submit as potentially upcoming" %>

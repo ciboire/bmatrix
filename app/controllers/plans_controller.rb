@@ -42,6 +42,11 @@ class PlansController < ApplicationController
     
     respond_to do |format|
       if @plan.save
+        
+        if params[:comment] != ""
+          @comment = Comment.create(:content => params[:comment], :plan_id => @plan.id)
+        end
+        
         format.html { redirect_to plans_url, notice: 'Plan was successfully created.' }
         format.json { render json: @plan, status: :created, location: @plan }
       else

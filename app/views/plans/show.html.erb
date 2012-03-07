@@ -86,7 +86,7 @@
 			<div class="timeSent">
 				<i><%= comment.created_at.in_time_zone("Mountain Time (US & Canada)").strftime("%a %b %d %I:%m %p") -%></i>
 			</div>
-			<div class="commentContent"><%= comment.content -%></div>
+			<div class="commentContent"><%= simple_format comment.content -%></div>
 		</div>
 	<% end %>
 </div>
