@@ -23,8 +23,17 @@
 		<div class="attending">
 			<span class="label">Attending MD:&nbsp;&nbsp;</span>
 			<span class="enter"><%= f.text_field :attending_md, :size => 30 %></span>
+			
+			<div>&nbsp;</div>
+			
+			<% if ['Upcoming', 'Needs Records Review', 'Waiting for Consult', 
+				'Waiting for Setup'].include?(@plan.status) %>
+				<span class="label">Target:&nbsp;&nbsp;</span>
+				<span class="enter"><%= f.text_field :target, :size => 50 %></span>
+			<% end %>
+	
 		</div>
-
+		
 
   	<div class="modifications">
 	
