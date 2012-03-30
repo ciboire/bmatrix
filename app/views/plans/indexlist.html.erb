@@ -35,11 +35,11 @@
 	<% end %>
 			<div class="upcoming">
 				<div class="flowstatus" style="margin-top: 20px; margin-bottom:30px">Potentially upcoming...</div>
-				<%= link_to 'New plan', new_plan_path %>
-				<% @plans.each do |plan| %>
-					<% if plan.status == 'Upcoming' %>
-						<% @identifier = "#{plan.timestring} <b>#{plan.lastname[0..20]} #{plan.firstname[0]}</b> #{plan.target[0..30]}" %>
-					<% end %>
+				<%= link_to 'New plan...', new_plan_path %>
+				<br /><br />
+				<% @plans_upcoming.each do |plan| %>
+						<% @identifier = "#{plan.lastname[0..20]} #{plan.firstname[0]} (#{plan.target[0..30]})" %>
+						<div class="identifier"><%= link_to raw(@identifier), plan -%></div><br />
 				<% end %>
 			</div>
 
