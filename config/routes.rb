@@ -2,6 +2,7 @@ Bmatrix::Application.routes.draw do
   resources :plans
   
   match 'deactivate/:id' => 'plans#deactivate', :as => :deactivate
+  match 'indexlist' => 'plans#indexlist', :as =>  :indexlist
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -54,7 +55,7 @@ Bmatrix::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
   
-  root :to => 'plans#index'
+  root :to => 'plans#indexlist'
 
   # See how all your routes lay out with "rake routes"
 

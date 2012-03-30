@@ -11,6 +11,17 @@ class PlansController < ApplicationController
     end
   end
 
+  def indexlist
+     @plans = Plan.find(:all, :conditions => ['status <> ? AND is_active == ?', 'Upcoming', true], :order => :when_needs_image_review)
+     @plans_upcoming = Plan.find(:all, :conditions => {:status => "Upcoming", :is_active => true})
+
+     respond_to do |format|
+       format.html # indexlist.html.erb
+       format.json { render json: @plans }
+     end
+   end  
+  
+
   # GET /plans/1
   # GET /plans/1.json
   def show
@@ -47,7 +58,7 @@ class PlansController < ApplicationController
           @comment = Comment.create(:content => params[:comment], :plan_id => @plan.id)
         end
         
-        format.html { redirect_to plans_url, notice: 'Plan was successfully created.' }
+        format.html { redirect_to indexlist_url, notice: 'Plan was successfully created.' }
         format.json { render json: @plan, status: :created, location: @plan }
       else
         format.html { render action: "new" }
@@ -93,7 +104,7 @@ class PlansController < ApplicationController
       
     respond_to do |format|
       if @plan.update_attributes(params[:plan])
-        format.html { redirect_to plans_url, notice: 'Plan was successfully updated.' }
+        format.html { redirect_to indexlist_url, notice: 'Plan was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "show" }
@@ -107,6 +118,6 @@ class PlansController < ApplicationController
     @plan.is_active = false
     @plan.save
     
-    redirect_to plans_url
+    redirect_to indexlist_url
   end
 end

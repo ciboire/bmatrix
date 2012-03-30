@@ -8,18 +8,28 @@ class Plan < ActiveRecord::Base
   def timestring
     current = Time.now
     case status
-    when 'Loaded'
-      current = when_loaded
-    when 'Needs Contours'
-      current = when_needs_contours
+    when 'Needs Records Review'
+      current = when_needs_image_review
+    when 'Waiting for Consult'
+      current = when_waiting_for_consult
+    when 'Waiting for Setup'
+      current = when_needs_setup
+    when 'Needs MultiPlan Prep'
+      current = when_needs_preparation  
+    when 'Needs MD Contours'
+      current = when_needs_md_contours
     when 'Needs Plan'
       current = when_needs_plan
     when 'Needs Approval'
-      current = when_needs_approval
+      current = when_needs_approval   
     when 'Needs Finalizing'
       current = when_needs_finalizing
-    when 'Finalized'
-      current = when_finalized
+    when 'Ready For Treatment'
+      current = when_ready_for_treatment
+    when 'In Treatment'
+      current = when_in_treatment
+    when 'Finished Treatment'
+      current = when_finished_treatment
     end
       
     days = ((Time.now - current) / 24.hour).floor
