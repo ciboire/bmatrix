@@ -24,7 +24,7 @@ class Plan < ActiveRecord::Base
       current = when_needs_approval   
     when 'Needs Finalizing'
       current = when_needs_finalizing
-    when 'Ready For Treatment'
+    when 'Ready for Treatment'
       current = when_ready_for_treatment
     when 'In Treatment'
       current = when_in_treatment
@@ -36,7 +36,9 @@ class Plan < ActiveRecord::Base
     hours = (((Time.now - current) / 1.hour) % 24).floor
     color = "#999"
     color = "#c11b17" if days > 1
-    color = "#c68e17" if days == 1
+    color = "#c69e17" if days == 1
+    color = "#00aa00" if status == 'In Treatment'
+    color = "#fff" if status == 'Finished Treatment'
     
     ts = "<font style=\"color:#{color}\">"
     ts = ts + (days > 0 ? (days > 1 ? "#{days} days " : "#{days} day ") : "")
