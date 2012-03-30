@@ -24,7 +24,7 @@ class Plan < ActiveRecord::Base
       current = when_needs_approval   
     when 'Needs Finalizing'
       current = when_needs_finalizing
-    when 'Ready For Treatment'
+    when 'Ready for Treatment'
       current = when_ready_for_treatment
     when 'In Treatment'
       current = when_in_treatment
