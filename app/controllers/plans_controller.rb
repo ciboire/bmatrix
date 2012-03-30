@@ -89,7 +89,7 @@ class PlansController < ApplicationController
       @plan.when_needs_approval = Time.now      
     when 'Needs Finalizing'
       @plan.when_needs_finalizing = Time.now
-    when 'Ready For Treatment'
+    when 'Ready for Treatment'
       @plan.when_ready_for_treatment = Time.now
     when 'In Treatment'
       @plan.when_in_treatment = Time.now
