@@ -79,7 +79,7 @@ class PlansController < ApplicationController
       @plan.when_waiting_for_consult = Time.now
     when 'Waiting for Setup'
       @plan.when_needs_setup = Time.now
-    when 'Needs MultiPlan Prep'
+    when 'Needs Dosimetry Prep'
       @plan.when_needs_preparation = Time.now      
     when 'Needs MD Contours'
       @plan.when_needs_md_contours = Time.now
