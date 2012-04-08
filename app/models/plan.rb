@@ -42,8 +42,8 @@ class Plan < ActiveRecord::Base
     color = "#999" if status == 'In Treatment'
     color = "#fff" if status == 'Finished Treatment'
     color = "#00aa00" if status == 'Ready for Treatment'
-    color = '#fff' if status = 'Waiting for Consult'
-    color = '#fff' if status = 'Waiting for Setup'
+    color = '#fff' if status == 'Waiting for Consult'
+    color = '#fff' if status == 'Waiting for Setup'
     
     ts = "<font style=\"color:#{color}\">"
     ts = ts + (days > 0 ? (days > 1 ? "#{days} days " : "#{days} day ") : "")
