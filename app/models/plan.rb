@@ -14,7 +14,7 @@ class Plan < ActiveRecord::Base
       current = when_waiting_for_consult
     when 'Waiting for Setup'
       current = when_needs_setup
-    when 'Needs MultiPlan Prep'
+    when 'Needs Dosimetry Prep'
       current = when_needs_preparation  
     when 'Needs MD Contours'
       current = when_needs_md_contours
@@ -37,9 +37,11 @@ class Plan < ActiveRecord::Base
     color = "#999"
     color = "#c11b17" if days > 1
     color = "#c69e17" if days == 1
-    color = "#00aa00" if status == 'In Treatment'
+    color = "#999" if status == 'In Treatment'
     color = "#fff" if status == 'Finished Treatment'
-    color = "#999" if status == 'Ready for Treatment'
+    color = "#00aa00" if status == 'Ready for Treatment'
+    color = '#fff' if status = 'Waiting for Consult'
+    color = '#fff' if status = 'Waiting for Setup'
     
     ts = "<font style=\"color:#{color}\">"
     ts = ts + (days > 0 ? (days > 1 ? "#{days} days " : "#{days} day ") : "")
