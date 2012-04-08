@@ -31,6 +31,8 @@ class Plan < ActiveRecord::Base
     when 'Finished Treatment'
       current = when_finished_treatment
     end
+    
+    current = Time.now if current == nil
       
     days = ((Time.now - current) / 24.hour).floor
     hours = (((Time.now - current) / 1.hour) % 24).floor
