@@ -71,30 +71,32 @@ class PlansController < ApplicationController
   # PUT /plans/1.json
   def update
     @plan = Plan.find(params[:id])
-    @plan.status = params[:status]
-    case @plan.status
-    when 'Needs Records Review'
-      @plan.when_needs_image_review = Time.now
-    when 'Waiting for Consult'
-      @plan.when_waiting_for_consult = Time.now
-    when 'Waiting for Setup'
-      @plan.when_needs_setup = Time.now
-    when 'Needs Dosimetry Prep'
-      @plan.when_needs_preparation = Time.now      
-    when 'Needs MD Contours'
-      @plan.when_needs_md_contours = Time.now
-    when 'Needs Plan'
-      @plan.when_needs_plan = Time.now
-    when 'Needs Approval'
-      @plan.when_needs_approval = Time.now      
-    when 'Needs Finalizing'
-      @plan.when_needs_finalizing = Time.now
-    when 'Ready for Treatment'
-      @plan.when_ready_for_treatment = Time.now
-    when 'In Treatment'
-      @plan.when_in_treatment = Time.now
-    when 'Finished Treatment'
-      @plan.when_finished_treatment = Time.now            
+    if params[:status] != 'no change'
+      @plan.status = params[:status]
+      case @plan.status
+      when 'Needs Records Review'
+        @plan.when_needs_image_review = Time.now
+      when 'Waiting for Consult'
+        @plan.when_waiting_for_consult = Time.now
+      when 'Waiting for Setup'
+        @plan.when_needs_setup = Time.now
+      when 'Needs Dosimetry Prep'
+        @plan.when_needs_preparation = Time.now      
+      when 'Needs MD Contours'
+        @plan.when_needs_md_contours = Time.now
+      when 'Needs Plan'
+        @plan.when_needs_plan = Time.now
+      when 'Needs Approval'
+        @plan.when_needs_approval = Time.now      
+      when 'Needs Finalizing'
+        @plan.when_needs_finalizing = Time.now
+      when 'Ready for Treatment'
+        @plan.when_ready_for_treatment = Time.now
+      when 'In Treatment'
+        @plan.when_in_treatment = Time.now
+      when 'Finished Treatment'
+        @plan.when_finished_treatment = Time.now            
+      end
     end
     @plan.save
     

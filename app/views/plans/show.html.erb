@@ -58,7 +58,7 @@
 					<div class="radiotext"> Revert back to "<%= "#{status_list[count-1]}" -%>" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 				<% end %>
 			
-				<%= radio_button_tag :status, status_list[count], true %>
+				<%= radio_button_tag :status, 'no change', true %>
 				<div class="radiotext"> Status unchanged &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 
 				<% if count < status_list.size-1 %>
