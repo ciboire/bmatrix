@@ -13,8 +13,8 @@
 		<% if plan.status == "Needs MD Contours" %>
 			<% @identifier = "#{plan.lastname[0..20]} #{plan.firstname[0]} (#{plan.target[0..30]})" %>
 			
-			<% @days = ((Time.now - plan.when_needs_image_review) / 24.hour).floor %>
-			<% @hours = (((Time.now - plan.when_needs_image_review) / 1.hour) % 24).floor %>
+			<% @days = ((Time.now - plan.when_upcoming) / 24.hour).floor %>
+			<% @hours = (((Time.now - plan.when_upcoming) / 1.hour) % 24).floor %>
 			
 			<div class="flowitem">
 				<div class="totaltime">[
@@ -22,8 +22,11 @@
 					<%= @hours == 1 ? "#{@hours} hr" : "#{@hours} hrs" -%>
 					]
 				</div>
-				<div class="timestring"><%= raw "#{plan.timestring}" -%></div>
+				<div class="timestring"><%= raw("#{plan.timestring}") -%></div>
+				<div class="modality"><%= plan.modality ? raw(plan.modality[0..11]) : "" -%></div>
+				<div class="attending_md"><%= plan.attending_md ? raw(plan.attending_md.upcase[0..3]) : "" -%></div>
 				<div class="identifier"><%= link_to raw(@identifier), plan -%></div>
+				<div class="notes"><i><%= plan.notes ? raw(plan.notes[0..50]) : "" -%></i></div>
 			</div>
 
 		<% end %>

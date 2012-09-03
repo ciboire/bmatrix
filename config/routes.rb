@@ -5,6 +5,8 @@ Bmatrix::Application.routes.draw do
   match 'needsMDContours' => 'plans#needsMDContours', :as => :needsMDContours
   match 'needsApproval' => 'plans#needsApproval', :as => :needsApproval
   match 'indexchoice' => 'plans#indexchoice', :as => :indexchoice
+  match 'indexlist' => 'plans#indexlist', :as => :indexlist
+  match 'index' => 'plans#index', :as => :index
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

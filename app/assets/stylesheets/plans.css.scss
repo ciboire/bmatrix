@@ -14,7 +14,7 @@ a .choicebuttonOverdue {
   background-color: #f00;
 	height: 200px;
 	width: 350px;
-	line-height: 200px;
+	line-height: 50px;
 	margin: 50px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -32,8 +32,10 @@ a .choicebuttonCurrent {
   background-color: #0f0;
 	height: 200px;
 	width: 350px;
-	line-height: 200px;
 	margin: 50px;
+	line-height: 90px;
+	padding-top: 30px;
+	padding-bottom: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
 	font-size: 20pt;
@@ -47,11 +49,13 @@ a .choicebuttonCurrent {
 
 .choicebuttonInactive {
 	display: inline-block;
-	background-color: #ddd;
+	background-color: #f9d3a5;
 	height: 200px;
 	width: 350px;
-	line-height: 200px;
+	line-height: 90px;
 	margin: 50px;
+	padding-top: 30px;
+	padding-bottom: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
 	font-size: 20pt;
@@ -69,6 +73,13 @@ a.choicetitle {
 
 a.choicetitle:hover {
 	color: black;
+}
+
+.badMD {
+	display: inline-block;
+	padding-left: 12px;
+	padding-right: 12px;
+	font-size: 13pt;
 }
 
 th {
@@ -232,7 +243,7 @@ font-size: 14pt;
 }
 
 .flowitem {
-margin-left: 30px;
+margin-left: 20px;
 margin-bottom: 10px;
 }
 
@@ -249,6 +260,23 @@ width: 125px;
 
 .identifier {
 display: inline-block;
+}
+
+.modality {
+display: inline-block;
+width: 90px;
+}
+
+.attending_md {
+display: inline-block;
+width: 40px;
+}
+
+.notes {
+display: inline-block;
+width: 140px;
+padding-left: 20px;
+color: #aaa;
 }
 
 .fordocs {

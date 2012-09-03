@@ -20,12 +20,22 @@
 
 		<div class="attending">
 			<span class="label">Attending MD:&nbsp;&nbsp;</span>
-			<span class="enter"><%= f.text_field :attending_md, :size => 30 %></span>
+			<span class="enter"><%= f.text_field :attending_md, :size => 10 %></span>
 			
 			<div>&nbsp;</div>
 			
 				<span class="label">Target:&nbsp;&nbsp;</span>
-				<span class="enter"><%= f.text_field :target, :size => 50 %></span>
+				<span class="enter"><%= f.text_field :target, :size => 30 %></span>
+				
+			<div>&nbsp;</div>
+				
+				<span class="label">Modality:&nbsp;&nbsp;</span>
+				<span class="enter"><%= f.text_field :modality, :size => 15 %></span>
+				
+			<div>&nbsp;</div>
+			
+				<span class="label">Notes:&nbsp;&nbsp;</span>
+				<span class="enter"><%= f.text_field :notes, :size => 70 %></span>
 	
 		</div>
 		

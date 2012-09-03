@@ -9,26 +9,44 @@
 <center>
 <% if @plans_needsMDContours.count == 0 %>
 	<div class="choicebuttonInactive">
-		Need MD Contours (0)
-		&#9786;
+		MD Contours Complete <br />
+		&#9786; &#9786; &#9786;
 	</div>
 <% else %>
 	<%= link_to needsMDContours_path, :style => 'text-decoration:none' do %>
-		<div class=<%=@overdue_needsMDContours ? "choicebuttonOverdue" : "choicebuttonCurrent" -%>>
-			Need MD Contours (<%= @plans_needsMDContours.count -%>)
+		<div class=<%=@overdue_needsMDContours ? raw('"choicebuttonOverdue"') : raw('"choicebuttonCurrent"') -%> style="align:top">
+			Need MD Contours (<%= @plans_needsMDContours.count -%>) <br />
+			<% if @lkm_needsMDContours > 0 %>
+				<div class="badMD"><%= @lkm_needsMDContours -%> LKM</div>
+			<% end %>
+			<% if @cks_needsMDContours > 0 %>
+				<div class="badMD"><%= @cks_needsMDContours -%> CKS</div>
+			<% end %>
+			<% if @other_needsMDContours > 0 %>
+				<div class="badMD"><%= @other_needsMDContours -%> Other</div>
+			<% end %>
 		</div>
 	<% end %>
 <% end %>
 
 <% if @plans_needsApproval.count == 0 %>
-	<div class="choicebuttonInactive">
-		Need Approval (0)
-		&#9786;
+	<div class="choicebuttonInactive" style="align:top">
+		Approvals Complete <br />
+		&#9786; &#9786; &#9786;
 	</div>
 <% else %>
 	<%= link_to needsApproval_path, :style => 'text-decoration:none' do %>
-		<div class=<%=@overdue_needsApproval ? "choicebuttonOverdue" : "choicebuttonCurrent" -%>>
-			Need Approval (<%= @plans_needsApproval.count -%>)
+		<div class=<%=@overdue_needsApproval ? raw('"choicebuttonOverdue"') : raw('"choicebuttonCurrent"') -%>>
+			Need Approval (<%= @plans_needsApproval.count -%>) <br />
+			<% if @lkm_needsApproval > 0 %>
+				<div class="badMD"><%= @lkm_needsApproval -%> LKM</div>
+			<% end %>
+			<% if @cks_needsApproval > 0 %>
+				<div class="badMD"><%= @cks_needsApproval -%> CKS</div>
+			<% end %>
+			<% if @other_needsApproval > 0 %>
+				<div class="badMD"><%= @other_needsApproval -%> Other</div>
+			<% end %>
 		</div>
 	<% end %>
 <% end %>
@@ -52,8 +70,8 @@
 		<% if plan.status == status %>
 			<% @identifier = "#{plan.lastname[0..20]} #{plan.firstname[0]} (#{plan.target[0..30]})" %>
 			
-			<% @days = ((Time.now - plan.when_needs_image_review) / 24.hour).floor %>
-			<% @hours = (((Time.now - plan.when_needs_image_review) / 1.hour) % 24).floor %>
+			<% @days = ((Time.now - plan.when_upcoming) / 24.hour).floor %>
+			<% @hours = (((Time.now - plan.when_upcoming) / 1.hour) % 24).floor %>
 			
 			<div class="flowitem">
 				<div class="totaltime">[
@@ -61,8 +79,11 @@
 					<%= @hours == 1 ? "#{@hours} hr" : "#{@hours} hrs" -%>
 					]
 				</div>
-				<div class="timestring"><%= raw "#{plan.timestring}" -%></div>
+				<div class="timestring"><%= raw("#{plan.timestring}") -%></div>
+				<div class="modality"><%= plan.modality ? raw(plan.modality[0..11]) : "" -%></div>
+				<div class="attending_md"><%= plan.attending_md ? raw(plan.attending_md.upcase[0..3]) : "" -%></div>
 				<div class="identifier"><%= link_to raw(@identifier), plan -%></div>
+				<div class="notes"><i><%= plan.notes ? raw(plan.notes[0..50]) : "" -%></i></div>
 			</div>
 
 		<% end %>
