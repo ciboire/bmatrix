@@ -20,6 +20,16 @@ class PlansController < ApplicationController
        format.json { render json: @plans }
      end
    end  
+   
+   def needsMDContours
+      @plans = Plan.find(:all, :conditions => ['status == ? AND is_active == ?', 'Needs MD Contours', true],
+       :order => :when_needs_md_contours)
+
+      respond_to do |format|
+        format.html # indexlist.html.erb
+        format.json { render json: @plans }
+      end
+    end
   
 
   # GET /plans/1

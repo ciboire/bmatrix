@@ -3,6 +3,7 @@ Bmatrix::Application.routes.draw do
   
   match 'deactivate/:id' => 'plans#deactivate', :as => :deactivate
   match 'indexlist' => 'plans#indexlist', :as =>  :indexlist
+  match 'needsMDContours' => 'plans#needsMDContours', :as => :needsMDContours
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,37 @@
+<meta http-equiv="refresh" content="150;url=http://10.120.3.134:3000/needsMDContours">
+
+<%= link_to "< BACK", indexlist_url -%>
+<br />
+<br />
+
+<div class="show">
+<h1>Needs MD Contours</h1>
+</div>
+<br />
+<br />
+
+
+
+	
+	<% @plans.each do |plan| %>
+		<% if plan.status == "Needs MD Contours" %>
+			<% @identifier = "#{plan.lastname[0..20]} #{plan.firstname[0]} (#{plan.target[0..30]})" %>
+			
+			<% @days = ((Time.now - plan.when_needs_image_review) / 24.hour).floor %>
+			<% @hours = (((Time.now - plan.when_needs_image_review) / 1.hour) % 24).floor %>
+			
+			<div class="flowitem">
+				<div class="totaltime">[
+					<%= @days > 0 ? (@days > 1 ? "#{@days} days " : "#{@days} day ") : nil -%>
+					<%= @hours == 1 ? "#{@hours} hr" : "#{@hours} hrs" -%>
+					]
+				</div>
+				<div class="timestring"><%= raw "#{plan.timestring}" -%></div>
+				<div class="identifier"><%= link_to raw(@identifier), plan -%></div>
+			</div>
+
+		<% end %>
+	<% end %>
+
+
+

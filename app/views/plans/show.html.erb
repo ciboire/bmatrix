@@ -33,41 +33,15 @@
 	
 		</div>
 		
-
+		<% status_list = ['Upcoming', 'Needs Records Review', 'Waiting for Consult',
+			'Waiting for Setup', 'Needs Dosimetry Prep', 'Needs MD Contours', 
+			'Needs Plan', 'Needs Approval', 'Needs Finalizing', 'Ready for Treatment', 'In Treatment',
+			'Finished Treatment'] %>
   	<div class="modifications">
 	
-			<div class="statustitle"><%= @plan.status -%></div>
-			
+		<div><%= select_tag :status, options_for_select(status_list, @plan.status),
+			:style => "font-size:18px;background-color:lightblue" %></div>
 
-	
-			<% status_list = ['Upcoming', 'Needs Records Review', 'Waiting for Consult', 
-				'Waiting for Setup', 'Needs Dosimetry Prep', 'Needs MD Contours', 
-				'Needs Plan', 'Needs Approval', 'Needs Finalizing', 'Ready for Treatment', 'In Treatment',
-				'Finished Treatment'] %>
-			
-			<% count = 0 %>
-			<% status_list.each do |s| %>
-			
-			<% if @plan.status == s %>
-			
-				<% if count > 0 %>
-					<%= radio_button_tag :status, status_list[count-1], false %>
-					<div class="radiotext"> Revert back to "<%= "#{status_list[count-1]}" -%>" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-				<% end %>
-			
-				<%= radio_button_tag :status, 'no change', true %>
-				<div class="radiotext"> Status unchanged &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-
-				<% if count < status_list.size-1 %>
-					<%= radio_button_tag :status, status_list[count+1], false %>
-					<div class="radiotext"> Move forward to "<%= "#{status_list[count+1]}" -%>"</div>
-				<% end %>
-				
-			<% end %>
-			
-			<% count = count + 1 %>
-
-			<% end %>
 
   		<div class="comment">
   			<%= f.label 'Comment' %> <br />
