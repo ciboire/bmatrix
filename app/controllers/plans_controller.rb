@@ -10,17 +10,34 @@ class PlansController < ApplicationController
       format.json { render :json => @plans }
     end
   end
+  
+  def indexchoice
+    @plans_needsMDContours = Plan.find(:all, :conditions => ['status == ? AND is_active == ?', 'Needs MD Contours', true], :order => :when_needs_image_review)
+    @plans_needsApproval = Plan.find(:all, :conditions => ['status == ? AND is_active == ?', 'Needs Approval', true])
+    
+    @overdue_needsMDContours = false
+    @plans_needsMDContours.each do |plan|
+      current = plan.when_needs_md_contours
+      days = ((Time.now - current) / 24.hour).floor
+      @overdue_needsMDContours = true if days > 1
+    end
+    
+    @overdue_needsApproval = false
+    @plans_needsApproval.each do |plan|
+      current = plan.when_needs_approval
+      days = ((Time.now - current) / 24.hour).floor
+      @overdue_needsApproval = true if days > 1
+    end
+    
+    @plans = Plan.find(:all, :conditions => ['status <> ? AND is_active == ?', 'Upcoming', true], :order => :when_needs_image_review)
+    @plans_upcoming = Plan.find(:all, :conditions => {:status => "Upcoming", :is_active => true})
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @plans }
+    end
+  end
 
-  def indexlist
-     @plans = Plan.find(:all, :conditions => ['status <> ? AND is_active == ?', 'Upcoming', true], :order => :when_needs_image_review)
-     @plans_upcoming = Plan.find(:all, :conditions => {:status => "Upcoming", :is_active => true})
-
-     respond_to do |format|
-       format.html # indexlist.html.erb
-       format.json { render json: @plans }
-     end
-   end  
-   
    def needsMDContours
       @plans = Plan.find(:all, :conditions => ['status == ? AND is_active == ?', 'Needs MD Contours', true],
        :order => :when_needs_md_contours)
@@ -30,6 +47,16 @@ class PlansController < ApplicationController
         format.json { render json: @plans }
       end
     end
+    
+    def needsApproval
+       @plans = Plan.find(:all, :conditions => ['status == ? AND is_active == ?', 'Needs Approval', true],
+        :order => :when_needs_approval)
+
+       respond_to do |format|
+         format.html # indexlist.html.erb
+         format.json { render json: @plans }
+       end
+     end
   
 
   # GET /plans/1
@@ -81,7 +108,7 @@ class PlansController < ApplicationController
   # PUT /plans/1.json
   def update
     @plan = Plan.find(params[:id])
-    if params[:status] != 'no change'
+    if params[:status] != @plan.status
       @plan.status = params[:status]
       case @plan.status
       when 'Needs Records Review'
@@ -116,7 +143,7 @@ class PlansController < ApplicationController
       
     respond_to do |format|
       if @plan.update_attributes(params[:plan])
-        format.html { redirect_to indexlist_url, notice: 'Plan was successfully updated.' }
+        format.html { redirect_to indexchoice_url }
         format.json { head :ok }
       else
         format.html { render action: "show" }

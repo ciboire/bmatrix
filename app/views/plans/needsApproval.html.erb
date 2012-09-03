@@ -1,16 +1,13 @@
-<meta http-equiv="refresh" content="150;url=http://10.120.3.134:3000/needsMDContours">
+<meta http-equiv="refresh" content="150;url=http://10.120.3.134:3000/needsApproval">
 
 <div class="show">
-<h1>Needs MD Contours</h1>
+<h1>Needs Approval</h1>
 </div>
 <br />
 <br />
-
-
-
 	
 	<% @plans.each do |plan| %>
-		<% if plan.status == "Needs MD Contours" %>
+		<% if plan.status == "Needs Approval" %>
 			<% @identifier = "#{plan.lastname[0..20]} #{plan.firstname[0]} (#{plan.target[0..30]})" %>
 			
 			<% @days = ((Time.now - plan.when_needs_image_review) / 24.hour).floor %>

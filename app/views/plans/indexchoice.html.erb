@@ -1,10 +1,42 @@
-<meta http-equiv="refresh" content="150;url=http://10.120.3.134:3000/indexlist">
+<meta http-equiv="refresh" content="150;url=http://10.120.3.134:3000/indexchoice">
 
 <center>
-<h1>Dosimetry Flow</h1>
+<div style="padding: 40px;color: black">
+<%= link_to("BMatrix", indexchoice_url, :class => "choicetitle") %>
+</div>
 </center>
 
-<%= link_to 'Needs MD Contours', :needsMDContours -%>
+<center>
+<% if @plans_needsMDContours.count == 0 %>
+	<div class="choicebuttonInactive">
+		Need MD Contours (0)
+		&#9786;
+	</div>
+<% else %>
+	<%= link_to needsMDContours_path, :style => 'text-decoration:none' do %>
+		<div class=<%=@overdue_needsMDContours ? "choicebuttonOverdue" : "choicebuttonCurrent" -%>>
+			Need MD Contours (<%= @plans_needsMDContours.count -%>)
+		</div>
+	<% end %>
+<% end %>
+
+<% if @plans_needsApproval.count == 0 %>
+	<div class="choicebuttonInactive">
+		Need Approval (0)
+		&#9786;
+	</div>
+<% else %>
+	<%= link_to needsApproval_path, :style => 'text-decoration:none' do %>
+		<div class=<%=@overdue_needsApproval ? "choicebuttonOverdue" : "choicebuttonCurrent" -%>>
+			Need Approval (<%= @plans_needsApproval.count -%>)
+		</div>
+	<% end %>
+<% end %>
+</center>
+
+
+
+
 
 <% status_list = ['Needs Records Review', 'Waiting for Consult', 
 	'Waiting for Setup', 'Needs Dosimetry Prep', 'Needs MD Contours', 

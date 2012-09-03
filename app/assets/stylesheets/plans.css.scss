@@ -9,6 +9,68 @@
 	color:blue
 }
 
+a .choicebuttonOverdue {
+  display: inline-block;
+  background-color: #f00;
+	height: 200px;
+	width: 350px;
+	line-height: 200px;
+	margin: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 20pt;
+	color: black;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	&:hover {
+		background-color: #f66;
+	};
+}
+
+a .choicebuttonCurrent {
+  display: inline-block;
+  background-color: #0f0;
+	height: 200px;
+	width: 350px;
+	line-height: 200px;
+	margin: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 20pt;
+	color: black;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	&:hover {
+		background-color: #6f6;
+	};
+}
+
+.choicebuttonInactive {
+	display: inline-block;
+	background-color: #ddd;
+	height: 200px;
+	width: 350px;
+	line-height: 200px;
+	margin: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 20pt;
+	color: black;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	
+}
+
+a.choicetitle {
+	text-decoration:none;
+	font-size: 40px;
+	color: #555;
+}
+
+a.choicetitle:hover {
+	color: black;
+}
+
 th {
 width: 130px;
 text-align: left;
