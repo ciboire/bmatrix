@@ -23,7 +23,7 @@
 					]
 				</div>
 				<div class="timestring"><%= raw("#{plan.timestring}") -%></div>
-				<div class="modality"><%= plan.modality ? raw(plan.modality[0..11]) : "" -%></div>
+				<div class="modality"><%= plan.modality ? raw(plan.modality.downcase[0..11]) : "" -%></div>
 				<div class="attending_md"><%= plan.attending_md ? raw(plan.attending_md.upcase[0..3]) : "" -%></div>
 				<div class="identifier"><%= link_to raw(@identifier), plan -%></div>
 				<div class="notes"><i><%= plan.notes ? raw(plan.notes[0..50]) : "" -%></i></div>
