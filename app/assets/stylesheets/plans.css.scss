@@ -13,17 +13,18 @@ a .choicebuttonOverdue {
   display: inline-block;
   background-color: #f00;
 	height: 200px;
-	width: 350px;
+	width: 250px;
 	line-height: 90px;
 	margin: 50px;
 	padding-top: 30px;
 	padding-bottom: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
-	font-size: 20pt;
+	font-size: 16pt;
 	color: black;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
+	border: 5px outset #f99;
 	&:hover {
 		background-color: #f66;
 	};
@@ -33,17 +34,18 @@ a .choicebuttonCurrent {
   display: inline-block;
   background-color: #0f0;
 	height: 200px;
-	width: 350px;
+	width: 250px;
 	margin: 50px;
 	line-height: 90px;
 	padding-top: 30px;
 	padding-bottom: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
-	font-size: 20pt;
+	font-size: 16pt;
 	color: black;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
+	border: 5px outset #9f9;
 	&:hover {
 		background-color: #6f6;
 	};
@@ -53,18 +55,18 @@ a .choicebuttonCurrent {
 	display: inline-block;
 	background-color: #f9d3a5;
 	height: 200px;
-	width: 350px;
+	width: 250px;
 	line-height: 90px;
 	margin: 50px;
 	padding-top: 30px;
 	padding-bottom: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
-	font-size: 20pt;
+	font-size: 16pt;
 	color: black;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
-	
+	border: 5px solid #f9d3a5;
 }
 
 a.choicetitle {
@@ -81,7 +83,7 @@ a.choicetitle:hover {
 	display: inline-block;
 	padding-left: 12px;
 	padding-right: 12px;
-	font-size: 13pt;
+	font-size: 12pt;
 }
 
 th {

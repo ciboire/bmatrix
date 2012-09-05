@@ -14,7 +14,7 @@
 	</div>
 <% else %>
 	<%= link_to needsMDContours_path, :style => 'text-decoration:none' do %>
-		<div class=<%=@overdue_needsMDContours ? raw('"choicebuttonOverdue"') : raw('"choicebuttonCurrent"') -%> style="align:top">
+		<div class=<%= @overdue_needsMDContours ? raw('"choicebuttonOverdue"') : raw('"choicebuttonCurrent"') -%> style="align:top">
 			Need MD Contours (<%= @plans_needsMDContours.count -%>) <br />
 			<% if @lkm_needsMDContours > 0 %>
 				<div class="badMD"><%= @lkm_needsMDContours -%> LKM</div>
@@ -36,7 +36,7 @@
 	</div>
 <% else %>
 	<%= link_to needsApproval_path, :style => 'text-decoration:none' do %>
-		<div class=<%=@overdue_needsApproval ? raw('"choicebuttonOverdue"') : raw('"choicebuttonCurrent"') -%>>
+		<div class=<%= @overdue_needsApproval ? raw('"choicebuttonOverdue"') : raw('"choicebuttonCurrent"') -%>>
 			Need Approval (<%= @plans_needsApproval.count -%>) <br />
 			<% if @lkm_needsApproval > 0 %>
 				<div class="badMD"><%= @lkm_needsApproval -%> LKM</div>
