@@ -15,13 +15,13 @@
 		<div class=<%= @overdue_needsMDContours ? raw('"mdbuttonOverdue"') : raw('"mdbuttonCurrent"') -%> style="align:top">
 			Need MD Contours (<%= @plans_needsMDContours.count -%>) <br />
 			<% if @lkm_needsMDContours > 0 %>
-				<div class="badMD"><%= @lkm_needsMDContours -%> LKM</div>
+				<div class="badMDview"><%= @lkm_needsMDContours -%> LKM</div>
 			<% end %>
 			<% if @cks_needsMDContours > 0 %>
-				<div class="badMD"><%= @cks_needsMDContours -%> CKS</div>
+				<div class="badMDview"><%= @cks_needsMDContours -%> CKS</div>
 			<% end %>
 			<% if @other_needsMDContours > 0 %>
-				<div class="badMD"><%= @other_needsMDContours -%> Other</div>
+				<div class="badMDview"><%= @other_needsMDContours -%> Other</div>
 			<% end %>
 		</div>
 	<% end %>
@@ -37,13 +37,13 @@
 		<div class=<%= @overdue_needsApproval ? raw('"mdbuttonOverdue"') : raw('"mdbuttonCurrent"') -%>>
 			Need Approval (<%= @plans_needsApproval.count -%>) <br />
 			<% if @lkm_needsApproval > 0 %>
-				<div class="badMD"><%= @lkm_needsApproval -%> LKM</div>
+				<div class="badMDview"><%= @lkm_needsApproval -%> LKM</div>
 			<% end %>
 			<% if @cks_needsApproval > 0 %>
-				<div class="badMD"><%= @cks_needsApproval -%> CKS</div>
+				<div class="badMDview"><%= @cks_needsApproval -%> CKS</div>
 			<% end %>
 			<% if @other_needsApproval > 0 %>
-				<div class="badMD"><%= @other_needsApproval -%> Other</div>
+				<div class="badMDview"><%= @other_needsApproval -%> Other</div>
 			<% end %>
 		</div>
 	<% end %>
