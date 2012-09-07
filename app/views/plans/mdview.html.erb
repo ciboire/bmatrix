@@ -1,0 +1,51 @@
+<meta http-equiv="refresh" content="150;url=http://10.120.3.134:3000/mdview">
+
+<div style="padding: 70px">
+	&nbsp;
+</div>
+
+<center>
+<% if @plans_needsMDContours.count == 0 %>
+	<div class="mdbuttonInactive">
+		MD Contours Complete <br />
+		&#9786; &#9786; &#9786;
+	</div>
+<% else %>
+	<%= link_to needsMDContours_path, :style => 'text-decoration:none' do %>
+		<div class=<%= @overdue_needsMDContours ? raw('"mdbuttonOverdue"') : raw('"mdbuttonCurrent"') -%> style="align:top">
+			Need MD Contours (<%= @plans_needsMDContours.count -%>) <br />
+			<% if @lkm_needsMDContours > 0 %>
+				<div class="badMD"><%= @lkm_needsMDContours -%> LKM</div>
+			<% end %>
+			<% if @cks_needsMDContours > 0 %>
+				<div class="badMD"><%= @cks_needsMDContours -%> CKS</div>
+			<% end %>
+			<% if @other_needsMDContours > 0 %>
+				<div class="badMD"><%= @other_needsMDContours -%> Other</div>
+			<% end %>
+		</div>
+	<% end %>
+<% end %>
+
+<% if @plans_needsApproval.count == 0 %>
+	<div class="mdbuttonInactive" style="align:top">
+		Approvals Complete <br />
+		&#9786; &#9786; &#9786;
+	</div>
+<% else %>
+	<%= link_to needsApproval_path, :style => 'text-decoration:none' do %>
+		<div class=<%= @overdue_needsApproval ? raw('"mdbuttonOverdue"') : raw('"mdbuttonCurrent"') -%>>
+			Need Approval (<%= @plans_needsApproval.count -%>) <br />
+			<% if @lkm_needsApproval > 0 %>
+				<div class="badMD"><%= @lkm_needsApproval -%> LKM</div>
+			<% end %>
+			<% if @cks_needsApproval > 0 %>
+				<div class="badMD"><%= @cks_needsApproval -%> CKS</div>
+			<% end %>
+			<% if @other_needsApproval > 0 %>
+				<div class="badMD"><%= @other_needsApproval -%> Other</div>
+			<% end %>
+		</div>
+	<% end %>
+<% end %>
+</center>

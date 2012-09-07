@@ -57,6 +57,53 @@ class PlansController < ApplicationController
       format.json { render :json => @plans }
     end
   end
+  
+  def mdview
+     @plans_needsMDContours = Plan.find(:all, :conditions => ['status == ? AND is_active == ?', 'Needs MD Contours', true], :order => :when_needs_image_review)
+     @plans_needsApproval = Plan.find(:all, :conditions => ['status == ? AND is_active == ?', 'Needs Approval', true])
+
+     @lkm_needsMDContours = 0
+     @cks_needsMDContours = 0
+     @other_needsMDContours = 0
+     @overdue_needsMDContours = false
+     @plans_needsMDContours.each do |plan|
+       current = plan.when_needs_md_contours
+       days = ((Time.now - current) / 24.hour).floor
+       @overdue_needsMDContours = true if days > 1
+       if plan.attending_md.casecmp("LKM") == 0
+         @lkm_needsMDContours += 1
+       elsif plan.attending_md.casecmp("CKS") == 0
+         @cks_needsMDContours += 1
+       else
+         @other_needsMDContours += 1
+       end  
+     end
+
+     @lkm_needsApproval = 0
+     @cks_needsApproval = 0
+     @other_needsApproval = 0
+     @overdue_needsApproval = false
+     @plans_needsApproval.each do |plan|
+       current = plan.when_needs_approval
+       days = ((Time.now - current) / 24.hour).floor
+       @overdue_needsApproval = true if days > 1
+       if plan.attending_md.casecmp("LKM") == 0
+         @lkm_needsApproval += 1
+       elsif plan.attending_md.casecmp("CKS") == 0
+         @cks_needsApproval += 1
+       else
+         @other_needsApproval += 1
+       end
+     end
+
+     @plans = Plan.find(:all, :conditions => ['status <> ? AND is_active == ?', 'Upcoming', true], :order => :when_needs_image_review)
+     @plans_upcoming = Plan.find(:all, :conditions => {:status => "Upcoming", :is_active => true})
+
+     respond_to do |format|
+       format.html # index.html.erb
+       format.json { render :json => @plans }
+     end
+   end
 
    def needsMDContours
       @plans = Plan.find(:all, :conditions => ['status == ? AND is_active == ?', 'Needs MD Contours', true],
