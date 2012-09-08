@@ -59,6 +59,7 @@ class PlansController < ApplicationController
   end
   
   def mdview
+     @mdview_toggle = true
      @plans_needsMDContours = Plan.find(:all, :conditions => ['status == ? AND is_active == ?', 'Needs MD Contours', true], :order => :when_needs_image_review)
      @plans_needsApproval = Plan.find(:all, :conditions => ['status == ? AND is_active == ?', 'Needs Approval', true])
 
