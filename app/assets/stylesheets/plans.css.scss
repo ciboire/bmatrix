@@ -32,7 +32,7 @@ a .choicebuttonOverdue {
 
 a .choicebuttonCurrent {
   display: inline-block;
-  background-color: #0f0;
+  background-color: #fc0;
 	height: 200px;
 	width: 250px;
 	margin: 50px;
@@ -45,9 +45,9 @@ a .choicebuttonCurrent {
 	color: black;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
-	border: 5px outset #9f9;
+	border: 5px outset #fc0;
 	&:hover {
-		background-color: #6f6;
+		background-color: #fd4;
 	};
 }
 
@@ -116,7 +116,7 @@ a .mdbuttonOverdue {
 
 a .mdbuttonCurrent {
   display: inline-block;
-  background-color: #0f0;
+  background-color: #fc0;
 	height: 350px;
 	width: 500px;
 	margin: 50px;
@@ -129,9 +129,9 @@ a .mdbuttonCurrent {
 	color: black;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
-	border: 5px solid #0f0;
+	border: 5px solid #fc0;
 	&:hover {
-		background-color: #0f0;
+		background-color: #fc0;
 	};
 }
 
