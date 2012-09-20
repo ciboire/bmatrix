@@ -70,13 +70,13 @@ a .choicebuttonCurrent {
 }
 
 a.choicetitle {
-	text-decoration:none;
+	text-decoration:underline;
 	font-size: 40px;
-	color: #555;
+	color: blue;
 }
 
 a.choicetitle:hover {
-	color: black;
+	color: blue;
 }
 
 .badMD {
