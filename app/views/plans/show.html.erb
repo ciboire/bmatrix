@@ -36,6 +36,13 @@
 			
 				<span class="label">Notes:&nbsp;&nbsp;</span>
 				<span class="enter"><%= f.text_field :notes, :size => 70 %></span>
+				
+			<div>&nbsp;</div>
+				
+					<span class="label">Chart Audit:&nbsp;&nbsp;</span>
+					<% @chart = "#{@plan.created_at.year}" + "-" + "#{@plan.created_at.month}" + "-" + "#{@plan.created_at.day}" \
+				        + "-" + "#{@plan.created_at.hour}" + "-" + "#{@plan.created_at.min}" + "-"  + "#{@plan.created_at.sec}" %>
+						<span class="chartlink"><a href=<%="http://10.120.3.134/~brt/charts/audit#{@chart}"-%>>QA</a> </span>
 	
 		</div>
 		

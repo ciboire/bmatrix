@@ -159,6 +159,10 @@ class PlansController < ApplicationController
     respond_to do |format|
       if @plan.save
         
+        @identifier = "#{@plan.created_at.year}" + "-" + "#{@plan.created_at.month}" + "-" + "#{@plan.created_at.day}" \
+        + "-" + "#{@plan.created_at.hour}" + "-" + "#{@plan.created_at.min}" + "-"  + "#{@plan.created_at.sec}"
+        system("cp -R /Users/brt/Sites/charts/template /Users/brt/Sites/charts/audit#{@identifier}")
+        
         if params[:comment] != ""
           @comment = Comment.create(:content => params[:comment], :plan_id => @plan.id)
         end
