@@ -1,7 +1,7 @@
 class PlansController < ApplicationController
   
   def dosisheets
-    @files = Dir.glob('public/dsheets/*')
+    @files = Dir.glob('/public/dsheets/*')
   end
   
   # GET /plans
