@@ -1,4 +1,9 @@
 class PlansController < ApplicationController
+  
+  def dosisheets
+    @files = Dir.glob('public/dsheets/*')
+  end
+  
   # GET /plans
   # GET /plans.json
   def index

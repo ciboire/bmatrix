@@ -8,6 +8,7 @@ Bmatrix::Application.routes.draw do
   match 'indexlist' => 'plans#indexlist', :as => :indexlist
   match 'index' => 'plans#index', :as => :index
   match 'mdview' => 'plans#mdview', :as => :mdview
+  match 'dosisheets' => 'plans#dosisheets', :as => :dosisheets
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
