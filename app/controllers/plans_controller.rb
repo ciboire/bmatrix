@@ -2,7 +2,10 @@ class PlansController < ApplicationController
   
   def dosisheets
     @files = Dir.glob('public/dsheets/*')
-    @files = ['public/dsheets/Generic.pdf', 'public/dsheets/Prostate 3625-5 Heterogeneous.pdf']
+    @prepend = 'public/dsheets/'
+    @files = [@prepend + 'Generic.pdf', 
+      @prepend + 'Prostate 3625-5 Heterogeneous.pdf',
+      @prepend + 'Trigeminal']
   end
   
   # GET /plans
