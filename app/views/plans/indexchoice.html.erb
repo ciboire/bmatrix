@@ -5,7 +5,7 @@
 <span style="font-size:40px;color:black">BMatrix&nbsp;/&nbsp;</span>
 <%= link_to("BTasks", 'http://10.120.3.134/~brt/btasks', :class => "choicetitle") %>
 <span style="font-size:40px;color:black">&nbsp;/&nbsp;</span>
-<%= link_to("DosiSheets", dosisheets_url(), :class => "choicetitle") %>
+<%= link_to("BDictations", "http://10.120.3.134:4000", :class => "choicetitle") %>
 </div>
 </center>
 
@@ -85,9 +85,6 @@
 				<div class="timestring"><%= raw("#{plan.timestring}") -%></div>
 				<div class="modality"><%= plan.modality ? raw(plan.modality.downcase[0..11]) : "" -%></div>
 				<div class="attending_md"><%= plan.attending_md ? raw(plan.attending_md.upcase[0..3]) : "" -%></div>
-				<% @chart = "#{plan.created_at.year}" + "-" + "#{plan.created_at.month}" + "-" + "#{plan.created_at.day}" \
-		        + "-" + "#{plan.created_at.hour}" + "-" + "#{plan.created_at.min}" + "-"  + "#{plan.created_at.sec}" %>
-				<div class="chartlink"><%= link_to "QA", "http://10.120.3.134/~brt/charts/audit#{@chart}" %></div>
 				<div class="identifier"><%= link_to raw(@identifier), plan -%></div>
 				<div class="notes"><i><%= plan.notes ? raw(plan.notes[0..50]) : "" -%></i></div>
 			</div>
